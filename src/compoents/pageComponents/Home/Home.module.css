@@ -1,0 +1,18 @@
+.homeCompContainer {
+  height: 100vh;
+  flex: 7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  font-weight: 100;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .homeCompContainer {
+    min-height: 100vh;
+  }
+}

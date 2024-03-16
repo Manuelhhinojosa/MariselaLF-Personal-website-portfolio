@@ -1,0 +1,12 @@
+.appContainer {
+  display: flex;
+  flex-direction: row;
+  font-family: "Titillium Web", sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+  .appContainer {
+    flex-direction: column;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,15 @@
+.home {
+  font-weight: 200;
+  margin-right: 25px;
+}
+
+.homeLink {
+  text-decoration: none;
+  color: black;
+}
+
+.buttonText:hover {
+  color: gray;
+  transition: 0.3s;
+  cursor: pointer;
+}
