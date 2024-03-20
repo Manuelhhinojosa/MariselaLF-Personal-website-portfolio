@@ -1,30 +1,11 @@
 import s from "./Blog.module.css";
 import HomeButton from "../../generalComponents/HomeButton/HomeButton";
+// import axios from "axios";
 
 // import { posts } from "../../../mockData";
 import { Link } from "react-router-dom";
-import axios from "axios";
-import { useState, useEffect } from "react";
 
 export const Blog = (props) => {
-  const [posts, setPosts] = useState([]);
-  const postsURL = "http://localhost:8000/posts/allposts";
-
-  // set blog data when loading
-  useEffect(() => {
-    axios
-      .get(postsURL)
-      .then((result) => {
-        const postsFromAPI = result.data;
-        setPosts(postsFromAPI.reverse());
-      })
-      .catch((error) => {
-        console.log("error starts here");
-        console.log("this is the error", error);
-        console.log("error ends here");
-      });
-  }, []);
-
   return (
     <div className={s.blogPageContainer}>
       <div className={s.top}>
@@ -43,7 +24,7 @@ export const Blog = (props) => {
         )}
 
         <div className={s.postsContainer}>
-          {posts.map((post) => (
+          {props.postStae.posts.map((post) => (
             <div className={s.postContainer}>
               <div className={s.titleContainer}>
                 <p>{post.title}</p>
@@ -151,20 +132,20 @@ export const Blog = (props) => {
               <div className={s.likesContainer}>
                 <div
                   className={s.btnContainer}
-                  onClick={() => {
-                    axios
-                      .patch(`http://localhost:8000/posts/${post._id}`)
-                      .then((result) => {
-                        console.log(result);
-                        axios.get(postsURL).then((res) => {
-                          const updatedPosts = res.data;
-                          setPosts(updatedPosts.reverse());
-                        });
-                      })
-                      .catch((error) => {
-                        console.log("this is the error:", error);
-                      });
-                  }}
+                  // onClick={() => {
+                  //   axios
+                  //     .patch(`http://localhost:8000/posts/${post._id}`)
+                  //     .then((result) => {
+                  //       console.log(result);
+                  //       axios.get(postsURL).then((res) => {
+                  //         const updatedPosts = res.data;
+                  //         setPosts(updatedPosts.reverse());
+                  //       });
+                  //     })
+                  //     .catch((error) => {
+                  //       console.log("this is the error:", error);
+                  //     });
+                  // }}
                 >
                   me gusta
                 </div>
@@ -180,20 +161,20 @@ export const Blog = (props) => {
 
                   <div
                     className={s.btnContainer}
-                    onClick={() => {
-                      axios
-                        .delete(`http://localhost:8000/posts/${post._id}`)
-                        .then((result) => {
-                          console.log(result);
-                          axios.get(postsURL).then((r) => {
-                            const updatedPosts2 = r.data;
-                            setPosts(updatedPosts2.reverse());
-                          });
-                        })
-                        .catch((error) => {
-                          console.log("this is the error:", error);
-                        });
-                    }}
+                    // onClick={() => {
+                    //   axios
+                    //     .delete(`http://localhost:8000/posts/${post._id}`)
+                    //     .then((result) => {
+                    //       console.log(result);
+                    //       axios.get(postsURL).then((r) => {
+                    //         const updatedPosts2 = r.data;
+                    //         setPosts(updatedPosts2.reverse());
+                    //       });
+                    //     })
+                    //     .catch((error) => {
+                    //       console.log("this is the error:", error);
+                    //     });
+                    // }}
                   >
                     eliminar post
                   </div>

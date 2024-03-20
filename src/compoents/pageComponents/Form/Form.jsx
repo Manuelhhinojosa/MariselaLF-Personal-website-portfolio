@@ -69,7 +69,7 @@ const Form = (props) => {
         setTextPost("");
         setDescriptionPost("");
 
-        navigate("/blog");
+        navigate("/blogmain");
       })
       .catch((error) => {
         console.log("error starts here");

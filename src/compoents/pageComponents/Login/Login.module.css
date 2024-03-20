@@ -47,7 +47,7 @@
   width: 50%;
   border: none;
   border-bottom: 1px solid transparent;
-  font-family: "Titillium Web", sans-serif;
+  font-family: "andale mono";
 }
 
 .loginForm input:hover {
@@ -65,7 +65,7 @@
   background-color: transparent;
   border: none;
   color: black;
-  font-family: "Titillium Web", sans-serif;
+  font-family: "andale mono";
 }
 
 .loginForm button:hover {

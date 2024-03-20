@@ -4,7 +4,7 @@ import NavBar from "./compoents/generalComponents/NavBar/NavBar";
 import { Home } from "./compoents/pageComponents/Home/Home";
 import ErrorPage from "./compoents/pageComponents/ErrorPage/ErrorPage";
 import About from "./compoents/pageComponents/About/About";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { projectsData } from "./projectsData";
 import Project from "./compoents/pageComponents/Project/Project";
 import Contact from "./compoents/pageComponents/Contact/Contact";
@@ -13,6 +13,7 @@ import { Blog } from "./compoents/pageComponents/Blog/Blog";
 import { Login } from "./compoents/pageComponents/Login/Login";
 import EditForm from "./compoents/pageComponents/EditForm/EditForm";
 import Form from "./compoents/pageComponents/Form/Form";
+import axios from "axios";
 
 function App() {
   // NavBar state
@@ -21,6 +22,24 @@ function App() {
   // auth
   const [isLogguedIn, setIsLogguedIn] = useState(false);
   const [user, setUser] = useState("");
+
+  // posts
+  const [posts, setPosts] = useState([]);
+  const getAllPostsUrl = "http://localhost:8000/posts/allposts";
+  useEffect(() => {
+    axios
+      .get(getAllPostsUrl)
+      .then((result) => {
+        const postsFromAPI = result.data;
+        setPosts(postsFromAPI.reverse());
+        console.log(posts);
+      })
+      .catch((error) => {
+        console.log("error starts here");
+        console.log("this is the error", error);
+        console.log("error ends here");
+      });
+  }, []);
 
   // NavBar props
   const navBarState = {
@@ -44,13 +63,21 @@ function App() {
     setIsLogguedIn,
   };
 
+  // BlogHome props
+
+  const postState = {
+    posts,
+    setPosts,
+    isLogguedIn,
+  };
+
   return (
     <div className={s.appContainer}>
       <NavBar navBarState={navBarState} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/blogmain" element={<BlogHome />} />
+        <Route path="/blogmain" element={<BlogHome postState={postState} />} />
         <Route
           path="/blog"
           element={<Blog verificationState={verificationState} />}

@@ -15,6 +15,7 @@ const About = () => {
               <span className={s.name}> Marisela L. Fierro</span> (Reside en
               Zapopan, Jalisco, México)
               <br />
+              <br />
               Es artista y docente desde hace más de 15 años. Tiene interés por
               el estudio de la creatividad en procesos educativos y artísticos
               contemporáneos, así como en el desarrollo de proyectos de
@@ -24,6 +25,8 @@ const About = () => {
               y de la Maestría en Psicología Educativa en la misma institución.
               Ha dado cursos, talleres y charlas a docentes y alumnos de
               preparatorias y licenciaturas en arte.
+              <br />
+              <br />
               <br />
               <br />
               Como creadora experimenta con dibujo, fotografía, técnicas mixtas,

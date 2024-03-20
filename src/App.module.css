@@ -1,7 +1,8 @@
 .appContainer {
   display: flex;
   flex-direction: row;
-  font-family: "Titillium Web", sans-serif;
+  /* font-family: "Titillium Web", sans-serif; */
+  font-family: "andale mono";
 }
 
 @media screen and (max-width: 600px) {

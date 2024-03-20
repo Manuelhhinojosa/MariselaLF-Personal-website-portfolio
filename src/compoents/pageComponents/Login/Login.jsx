@@ -30,7 +30,7 @@ export const Login = (props) => {
         const user = result.data;
         props.userState.setUser(user._id);
         props.userState.setIsLogguedIn(true);
-        navigate("/blog");
+        navigate("/blogmain");
       })
       .catch((error) => {
         console.log("this is the error", error);
