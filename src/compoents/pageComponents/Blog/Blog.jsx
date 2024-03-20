@@ -1,9 +1,9 @@
 import s from "./Blog.module.css";
 import HomeButton from "../../generalComponents/HomeButton/HomeButton";
-// import axios from "axios";
-
-// import { posts } from "../../../mockData";
+import axios from "axios";
 import { Link } from "react-router-dom";
+
+const getAllPostsUrl = "http://localhost:8000/posts/allposts";
 
 export const Blog = (props) => {
   return (
@@ -11,28 +11,16 @@ export const Blog = (props) => {
       <div className={s.top}>
         <HomeButton />
       </div>
-
       <div className={s.bottom}>
-        {props.verificationState.isLogguedIn ? (
-          <div className={s.blogBarContainer}>
-            <Link className={s.link} to="/add">
-              <p>agregar post</p>
-            </Link>
-          </div>
-        ) : (
-          " "
-        )}
-
         <div className={s.postsContainer}>
-          {props.postStae.posts.map((post) => (
+          {props.verificationState.posts.map((post) => (
             <div className={s.postContainer}>
               <div className={s.titleContainer}>
                 <p>{post.title}</p>
               </div>
 
               <div className={s.descriptionContainer}>
-                {" "}
-                <p>{post.description}</p>{" "}
+                <p>{post.description}</p>
               </div>
 
               <div className={s.dateContainer}>
@@ -132,20 +120,22 @@ export const Blog = (props) => {
               <div className={s.likesContainer}>
                 <div
                   className={s.btnContainer}
-                  // onClick={() => {
-                  //   axios
-                  //     .patch(`http://localhost:8000/posts/${post._id}`)
-                  //     .then((result) => {
-                  //       console.log(result);
-                  //       axios.get(postsURL).then((res) => {
-                  //         const updatedPosts = res.data;
-                  //         setPosts(updatedPosts.reverse());
-                  //       });
-                  //     })
-                  //     .catch((error) => {
-                  //       console.log("this is the error:", error);
-                  //     });
-                  // }}
+                  onClick={() => {
+                    axios
+                      .patch(`http://localhost:8000/posts/${post._id}`)
+                      .then((result) => {
+                        console.log(result);
+                        axios.get(getAllPostsUrl).then((res) => {
+                          const updatedPosts = res.data;
+                          props.verificationState.setPosts(
+                            updatedPosts.reverse()
+                          );
+                        });
+                      })
+                      .catch((error) => {
+                        console.log("this is the error:", error);
+                      });
+                  }}
                 >
                   me gusta
                 </div>
@@ -158,23 +148,24 @@ export const Blog = (props) => {
                   <Link className={s.link} to="/edit" state={post}>
                     <div className={s.btnContainer}>editar</div>
                   </Link>
-
                   <div
                     className={s.btnContainer}
-                    // onClick={() => {
-                    //   axios
-                    //     .delete(`http://localhost:8000/posts/${post._id}`)
-                    //     .then((result) => {
-                    //       console.log(result);
-                    //       axios.get(postsURL).then((r) => {
-                    //         const updatedPosts2 = r.data;
-                    //         setPosts(updatedPosts2.reverse());
-                    //       });
-                    //     })
-                    //     .catch((error) => {
-                    //       console.log("this is the error:", error);
-                    //     });
-                    // }}
+                    onClick={() => {
+                      axios
+                        .delete(`http://localhost:8000/posts/${post._id}`)
+                        .then((result) => {
+                          console.log(result);
+                          axios.get(getAllPostsUrl).then((r) => {
+                            const updatedPosts2 = r.data;
+                            props.verificationState.setPosts(
+                              updatedPosts2.reverse()
+                            );
+                          });
+                        })
+                        .catch((error) => {
+                          console.log("this is the error:", error);
+                        });
+                    }}
                   >
                     eliminar post
                   </div>

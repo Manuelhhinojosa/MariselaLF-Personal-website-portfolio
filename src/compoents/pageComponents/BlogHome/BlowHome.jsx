@@ -22,6 +22,12 @@ const BlogHome = (props) => {
           ))}
         </div>
 
+        <div className={s.allPostsLinkContainer}>
+          <Link className={s.postLink} to="/allposts">
+            <p>Ver todos los posts.</p>
+          </Link>
+        </div>
+
         {props.postState.isLogguedIn ? (
           <div className={s.addContainer}>
             <Link className={s.postLink} to="/add">

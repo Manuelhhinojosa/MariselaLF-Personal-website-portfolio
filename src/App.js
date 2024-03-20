@@ -53,6 +53,8 @@ function App() {
   const verificationState = {
     isLogguedIn,
     setIsLogguedIn,
+    posts,
+    setPosts,
   };
 
   // form props
@@ -61,6 +63,8 @@ function App() {
     setUser,
     isLogguedIn,
     setIsLogguedIn,
+    posts,
+    setPosts,
   };
 
   // BlogHome props
@@ -79,7 +83,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/blogmain" element={<BlogHome postState={postState} />} />
         <Route
-          path="/blog"
+          path="/allposts"
           element={<Blog verificationState={verificationState} />}
         />
         {projectsData.map((project) => (
@@ -92,7 +96,10 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login userState={userState} />} />
         <Route path="/add" element={<Form userState={userState} />} />
-        <Route path="/edit" element={<EditForm />} />
+        <Route
+          path="/edit"
+          element={<EditForm verificationState={verificationState} />}
+        />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>

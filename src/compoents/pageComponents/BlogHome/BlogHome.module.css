@@ -22,7 +22,7 @@
   height: 95%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -54,14 +54,22 @@
   text-align: left;
 }
 
+.postTitleContainer p {
+  font-size: 0.8rem;
+}
+
 .postLink p {
   color: black;
   text-decoration: none;
+  font-size: 0.8rem;
 }
 
 .postLink p:hover {
   color: gray;
   transition: 0.3s;
+}
+
+.allPostsLinkContainer {
 }
 
 .addContainer {

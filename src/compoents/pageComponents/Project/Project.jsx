@@ -9,7 +9,10 @@ const Project = (props) => {
       </div>
       <div className={s.bottomContainer}>
         <div className={s.projectContainer}>
-          <div className={s.titleContainer}>{props.project.title}</div>
+          <div className={s.titleContainer}>
+            {" "}
+            <p>{props.project.title}</p>{" "}
+          </div>
           <div className={s.descContainer}>
             {/*  */}
 

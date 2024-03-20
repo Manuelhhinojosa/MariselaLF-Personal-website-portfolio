@@ -70,8 +70,8 @@
 }
 
 .postContainer {
-  width: 75%;
-  min-height: 90%;
+  width: 85%;
+  min-height: 100%;
   margin: 3rem;
   display: flex;
   flex-direction: column;
@@ -80,6 +80,7 @@
   overflow-y: scroll;
   font-weight: 100;
   position: relative;
+  border-bottom: 1px dashed black;
 }
 
 .postContainer::-webkit-scrollbar {
@@ -107,7 +108,7 @@
 
 .titleContainer p {
   text-decoration: underline;
-  font-size: 1.15rem;
+  font-size: 1rem;
   text-align: justify;
   font-weight: 100;
 }
@@ -145,6 +146,7 @@
 .textContainer p {
   text-align: justify;
   margin: 1rem;
+  font-size: 0.8rem;
 }
 
 .imgContainer {

@@ -38,6 +38,7 @@
   align-items: center;
   overflow: hidden;
   overflow-y: scroll;
+  font-size: 0.8rem;
 }
 
 .aboutTextContainer::-webkit-scrollbar {
@@ -60,7 +61,7 @@
 }
 
 .name {
-  font-weight: 300;
+  font-size: 1rem;
 }
 
 .aboutImgContainer {

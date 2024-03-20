@@ -16,6 +16,7 @@ const About = () => {
               Zapopan, Jalisco, México)
               <br />
               <br />
+              <br />
               Es artista y docente desde hace más de 15 años. Tiene interés por
               el estudio de la creatividad en procesos educativos y artísticos
               contemporáneos, así como en el desarrollo de proyectos de

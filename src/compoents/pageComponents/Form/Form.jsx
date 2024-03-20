@@ -68,8 +68,12 @@ const Form = (props) => {
         setMediaPost("");
         setTextPost("");
         setDescriptionPost("");
+        const getAllPostsUrl = "http://localhost:8000/posts/allposts";
+        axios.get(getAllPostsUrl).then((response) => {
+          props.userState.setPosts(response.data.reverse());
+        });
 
-        navigate("/blogmain");
+        navigate("/allposts");
       })
       .catch((error) => {
         console.log("error starts here");

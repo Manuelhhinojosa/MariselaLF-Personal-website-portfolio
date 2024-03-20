@@ -6,7 +6,7 @@ import axios from "axios";
 
 import { useNavigate } from "react-router-dom";
 
-const EditForm = () => {
+const EditForm = (props) => {
   const location = useLocation();
   const post = location.state;
 
@@ -42,8 +42,13 @@ const EditForm = () => {
     axios
       .put(editURL, formData, config)
       .then((result) => {
-        console.log(result);
-        navigate("/blog");
+        const getAllPostsUrl = "http://localhost:8000/posts/allposts";
+        axios.get(getAllPostsUrl).then((response) => {
+          const allPostsAfterEditing = response.data;
+          props.verificationState.setPosts(allPostsAfterEditing.reverse());
+        });
+
+        navigate("/allposts");
       })
       .catch((error) => {
         console.log("this is the error", error);
