@@ -8,6 +8,7 @@ import { useState } from "react";
 import { projectsData } from "./projectsData";
 import Project from "./compoents/pageComponents/Project/Project";
 import Contact from "./compoents/pageComponents/Contact/Contact";
+import BlogHome from "./compoents/pageComponents/BlogHome/BlowHome";
 import { Blog } from "./compoents/pageComponents/Blog/Blog";
 import { Login } from "./compoents/pageComponents/Login/Login";
 import EditForm from "./compoents/pageComponents/EditForm/EditForm";
@@ -49,6 +50,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/blogmain" element={<BlogHome />} />
         <Route
           path="/blog"
           element={<Blog verificationState={verificationState} />}

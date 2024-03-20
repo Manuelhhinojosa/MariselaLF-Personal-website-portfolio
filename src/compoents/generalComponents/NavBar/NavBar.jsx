@@ -31,7 +31,7 @@ const NavBar = (props) => {
               <div className={s.menuItemContainer}>acerca de</div>
             </Link>
 
-            <Link className={s.link} to="/blog">
+            <Link className={s.link} to="/blogmain">
               <div className={s.menuItemContainer}>blog</div>
             </Link>
           </div>

@@ -79,7 +79,6 @@
   overflow: hidden;
   overflow-y: scroll;
   font-weight: 100;
-  border: 1px solid black;
   position: relative;
 }
 
@@ -102,7 +101,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
   position: sticky;
   background-attachment: fixed;
 }
@@ -112,7 +110,6 @@
   font-size: 1.15rem;
   text-align: justify;
   font-weight: 100;
-  color: white;
 }
 .dateContainer {
   font-size: 0.75rem;
