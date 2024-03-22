@@ -32,7 +32,6 @@ function App() {
       .then((result) => {
         const postsFromAPI = result.data;
         setPosts(postsFromAPI.reverse());
-        console.log(posts);
       })
       .catch((error) => {
         console.log("error starts here");
@@ -86,6 +85,7 @@ function App() {
           path="/allposts"
           element={<Blog verificationState={verificationState} />}
         />
+
         {projectsData.map((project) => (
           <Route
             key={project.id}

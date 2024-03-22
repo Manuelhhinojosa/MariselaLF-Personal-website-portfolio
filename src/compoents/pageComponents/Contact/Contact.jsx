@@ -42,7 +42,7 @@ const Contact = () => {
     subjectRef.current.value = "";
     emailRef.current.value = "";
     messageRef.current.value = "";
-    nameRef.current.focus();
+    // nameRef.current.focus();
   };
 
   const handleSent = () => {
