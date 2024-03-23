@@ -11,12 +11,13 @@ const BlogHome = (props) => {
       <div className={s.bottom}>
         <div className={s.listContainer}>
           <div className={s.postTitleContainer}>
-            <p>Posts:</p>
+            <p className={s.titleText}>Posts:</p>
           </div>
+
           {props.postState.posts.map((post) => (
             <Link key={post.id} className={s.postLink} to="/test">
               <p>
-                {post.title} del {post.createdAt.slice(2, 10)}
+                - {post.title} del {post.createdAt.slice(2, 10)}
               </p>
             </Link>
           ))}
@@ -24,7 +25,7 @@ const BlogHome = (props) => {
 
         <div className={s.allPostsLinkContainer}>
           <Link className={s.postLink} to="/allposts">
-            <p>Ver todos los posts.</p>
+            <p style={{ textDecoration: "none" }}>Ver todos los posts.</p>
           </Link>
         </div>
 

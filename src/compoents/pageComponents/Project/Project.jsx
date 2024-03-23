@@ -96,6 +96,16 @@ const Project = (props) => {
 
             {props.project.id === 8 ? (
               <div className={s.descText}>
+                <p>{props.project.description.slice(0, 310)}</p>
+                <p>{props.project.description.slice(311, 679)}</p>
+                <p>{props.project.description.slice(680)}</p>
+              </div>
+            ) : (
+              ""
+            )}
+
+            {props.project.id === 9 ? (
+              <div className={s.descText}>
                 <p>{props.project.description}</p>
               </div>
             ) : (

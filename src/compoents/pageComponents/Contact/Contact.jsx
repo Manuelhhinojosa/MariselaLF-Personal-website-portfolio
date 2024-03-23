@@ -60,21 +60,21 @@ const Contact = () => {
           <form action="" className={s.contactForm} ref={formRef}>
             <input
               type="text"
-              placeholder="nombre"
+              placeholder="Nombre"
               name="name"
               autocomplete="off"
               ref={nameRef}
             />
             <input
               type="text"
-              placeholder="tema"
+              placeholder="Tema"
               name="subject"
               autocomplete="off"
               ref={subjectRef}
             />
             <input
               type="text"
-              placeholder="correo eléctronico"
+              placeholder="Correo eléctronico"
               name="email"
               autocomplete="off"
               ref={emailRef}
@@ -82,22 +82,22 @@ const Contact = () => {
             <textarea
               name="message"
               rows="5"
-              placeholder="mensaje"
+              placeholder="Mensaje"
               ref={messageRef}
             ></textarea>
-            <button onClick={handleUserData}>enviar</button>
+            <button onClick={handleUserData}>Enviar</button>
           </form>
         </div>
       </div>
       {sent ? (
         <div className={s.thanksMessage}>
           <div>
-            mensage enviado
+            Mensage enviado
             <sup
               className={s.thanksMessageButton}
               onClick={() => handleSent(false)}
             >
-              cerrar
+              Cerrar
             </sup>
           </div>
         </div>

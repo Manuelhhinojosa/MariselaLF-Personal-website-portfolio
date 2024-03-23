@@ -51,7 +51,7 @@ export const Login = (props) => {
             <input
               type="text"
               name="username"
-              placeholder="usuario"
+              placeholder="Usuario"
               autoComplete="off"
               onChange={(e) => {
                 setUsername(e.target.value);
@@ -62,14 +62,14 @@ export const Login = (props) => {
             <input
               type="password"
               name="password"
-              placeholder="contaseña"
+              placeholder="Contaseña"
               autoComplete="off"
               onChange={(e) => {
                 setPassword(e.target.value);
               }}
               ref={passwordRef}
             />
-            <button onClick={handleSignIn}>ingresar</button>
+            <button onClick={handleSignIn}>Ingresar</button>
           </form>
         </div>
       </div>

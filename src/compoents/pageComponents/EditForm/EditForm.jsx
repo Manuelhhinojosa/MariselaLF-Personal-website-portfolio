@@ -55,6 +55,11 @@ const EditForm = (props) => {
       });
   };
 
+  const handleCancel = (e) => {
+    e.preventDefault();
+    navigate("/allposts");
+  };
+
   return (
     <div className={s.editFormContainer}>
       <div className={s.top}>
@@ -73,7 +78,6 @@ const EditForm = (props) => {
               }}
               ref={titleRef}
             />
-
             {post.media ? (
               <div className={s.imgPost}>
                 <img src={post.media.url}></img>
@@ -81,9 +85,7 @@ const EditForm = (props) => {
             ) : (
               ""
             )}
-
             {post.text ? <div className={s.textPost}>{post.text}</div> : ""}
-
             <textarea
               placeholder={post.description}
               name="description"
@@ -94,8 +96,10 @@ const EditForm = (props) => {
               }}
               ref={descriptionRef}
             ></textarea>
-
-            <button onClick={handleEdit}>edit post</button>
+            <button onClick={handleEdit}>Editar post</button>{" "}
+            <span>
+              <button onClick={handleCancel}>Cancelar</button>
+            </span>
           </form>
         </div>
       </div>

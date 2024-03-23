@@ -28,7 +28,6 @@
 .formContainer {
   height: 70%;
   width: 40%;
-  border: 1px solid black;
 }
 
 .form {
@@ -45,13 +44,22 @@
   height: 4rem;
   border: none;
   border-bottom: 1px solid transparent;
-  font-family: "Titillium Web", sans-serif;
+  font-family: "andale mono";
   text-align: center;
 }
 
 .form input:nth-child(1):hover {
   border-bottom: 1px solid black;
-  transition: 0.5s;
+  transition: 0.3s;
+}
+
+.form input:nth-child(2) {
+  border-bottom: 1px solid transparent;
+}
+
+.form input:nth-child(2):hover {
+  border-bottom: 1px solid black;
+  transition: 0.3s;
 }
 
 .form input:focus {
@@ -61,12 +69,15 @@
 .form input::file-selector-button {
   background-color: white;
   border: 1px solid black;
-  font-family: "Titillium Web", sans-serif;
+  font-family: "andale mono";
   margin: 1rem;
+  border: none;
 }
 
 .form input::file-selector-button:hover {
   cursor: pointer;
+  color: gray;
+  transition: 0.3s;
 }
 
 .form input::file-selector-button:focus {
@@ -75,25 +86,26 @@
 
 .form label {
   color: gray;
-  font-family: "Titillium Web", sans-serif;
+  font-family: "andale mono";
   font-weight: 100;
-  font-size: 0.7rem;
-}
-
-.postOptions {
-  font-weight: 100;
+  font-size: 0.8rem;
 }
 
 .form textarea {
   width: 80%;
   border: none;
-  border: 1px solid black;
-  font-family: "Titillium Web", sans-serif;
+  border: 1px solid transparent;
+  font-family: "andale mono";
   margin: 1rem;
 }
 
 .form textarea:focus {
   outline: none;
+}
+
+.form textarea:hover {
+  border-bottom: black 1px solid;
+  transition: 0.3s;
 }
 
 .form button {
@@ -103,11 +115,11 @@
   background-color: transparent;
   border: none;
   color: black;
-  font-family: "Titillium Web", sans-serif;
+  font-family: "andale mono";
 }
 
 .form button:hover {
-  opacity: 0.5;
+  opacity: 0.3;
   transition: 0.5s;
   cursor: pointer;
 }

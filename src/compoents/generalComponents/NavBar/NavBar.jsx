@@ -17,7 +17,7 @@ const NavBar = (props) => {
       <div className={s.topNavBarContainer}>
         <div className={s.moreContainer}>
           <p className={s.p} onClick={handleNavBar}>
-            {props.navBarState.showNavBar ? "ocultar" : "ver más"}
+            {props.navBarState.showNavBar ? "Ocultar" : "Ver más"}
           </p>
         </div>
         <div
@@ -28,11 +28,11 @@ const NavBar = (props) => {
 
           <div className={s.pageMenuContainerTop}>
             <Link className={s.link} to="/about">
-              <div className={s.menuItemContainer}>acerca de</div>
+              <div className={s.menuItemContainer}>Acerca de</div>
             </Link>
 
             <Link className={s.link} to="/blogmain">
-              <div className={s.menuItemContainer}>blog</div>
+              <div className={s.menuItemContainer}>Blog</div>
             </Link>
           </div>
 
@@ -40,7 +40,7 @@ const NavBar = (props) => {
 
           <div className={s.pageMenuContainerBottom}>
             <div className={s.pageMenuContainerBottom1}>
-              <div>proyectos:</div>
+              <div>Proyectos:</div>
               <br />
               <Link className={s.link} to="/lacuerpaquesomos">
                 <div className={s.menuItemContainer}>Cuerpa</div>
@@ -66,6 +66,9 @@ const NavBar = (props) => {
               <Link className={s.link} to="/amanuense">
                 <div className={s.menuItemContainer}>Amanuense</div>
               </Link>
+              <Link className={s.link} to="/pajaros">
+                <div className={s.menuItemContainer}>Pájaros</div>
+              </Link>
             </div>
 
             {props.navBarState.isLogguedIn ? (
@@ -79,14 +82,14 @@ const NavBar = (props) => {
                       navigate("/");
                     }}
                   >
-                    salir
+                    Salir
                   </div>
                 </div>
               </div>
             ) : (
               <div className={s.pageMenuContainerBottom2}>
                 <Link className={s.link} to="/login">
-                  <div className={s.menuItemContainer}>ingresar</div>
+                  <div className={s.menuItemContainer}>Ingresar</div>
                 </Link>
               </div>
             )}

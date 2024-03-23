@@ -92,7 +92,7 @@ const Form = (props) => {
           <form className={s.form}>
             <input
               type="text"
-              placeholder="titulo"
+              placeholder="Titulo"
               name="title"
               autoComplete="off"
               onChange={(e) => {
@@ -100,8 +100,8 @@ const Form = (props) => {
               }}
               ref={titleRef}
             />
-            <div>
-              <label id="media">media</label>
+            <div className={s.test}>
+              <label id="media">Media</label>
               <input
                 type="file"
                 name="media"
@@ -113,9 +113,9 @@ const Form = (props) => {
                 ref={mediaRef}
               />
             </div>
-            <div className={s.postOptions}>+++ ó +++</div>
+
             <textarea
-              placeholder="qué estás pensando?"
+              placeholder="Texto"
               name="textPost"
               cols="30"
               rows="10"
@@ -125,7 +125,7 @@ const Form = (props) => {
               ref={textRef}
             ></textarea>
             <textarea
-              placeholder="descipción"
+              placeholder="Descipción"
               name="description"
               cols="auto"
               rows="auto"
@@ -134,7 +134,7 @@ const Form = (props) => {
               }}
               ref={descriptionRef}
             ></textarea>
-            <button onClick={addPost}>agregar</button>
+            <button onClick={addPost}>Agregar post</button>
           </form>
         </div>
       </div>

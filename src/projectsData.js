@@ -90,15 +90,15 @@ export const projectsData = [
     description:
       "Pangea es un proyecto de largo aliento en proceso. Ha sido realizado entre las ciudades de Berlín, Valencia, Guadalajara (MX) y La Paz (MX). A partir de la experimentación con diferentes técnicas y materiales, exploro temas relacionados con las relaciones afectivas y la geografía global.",
     imgOne:
-      "https://res.cloudinary.com/mangud/image/upload/v1654778685/Marisela/imgOne_qbpmkj.jpg",
+      "https://res.cloudinary.com/mangud/image/upload/v1711189495/Marisela/Pangea_k3n7gb.jpg",
     imgTwo:
-      "https://res.cloudinary.com/mangud/image/upload/v1654778685/Marisela/imgTwo_kzzgnk.jpg",
+      "https://res.cloudinary.com/mangud/image/upload/v1711189513/Marisela/20221123-_MG_9733_dwgujk.jpg",
     imgThree:
-      "https://res.cloudinary.com/mangud/image/upload/v1654778685/Marisela/imgFive_pwcv48.jpg",
+      "https://res.cloudinary.com/mangud/image/upload/v1711189518/Marisela/20230513-_MG_0186_qbtfej.jpg",
     imgFour:
-      "https://res.cloudinary.com/mangud/image/upload/v1654778685/Marisela/imgThree_gfvirf.jpg",
+      "https://res.cloudinary.com/mangud/image/upload/v1711189526/Marisela/Captura_de_pantalla_2023-05-17_a_la_s_17.27.43_iyls8l.png",
     imgFive:
-      "https://res.cloudinary.com/mangud/image/upload/v1654778685/Marisela/imgFour_ebcyul.jpg",
+      "https://res.cloudinary.com/mangud/image/upload/v1711189531/Marisela/Captura_de_pantalla_2024-03-21_a_la_s_23.05.33_qp8nfr.png",
   },
   {
     id: 7,
@@ -107,30 +107,47 @@ export const projectsData = [
     description:
       "Sigilo es el nombre de una serie de móviles efímeros que se componen de intenciones codificadas a partir de números y reglas de composición visual. El carácter perecedero de los pétalos y su liviandad permiten que eventualmente las intenciones se liberen de su código material y regresen a su abstracción e inasibilidad.",
     imgOne:
-      "https://res.cloudinary.com/mangud/image/upload/v1664984291/Marisela/Asociaci%C3%B3n_de_dibujantes_3_fxkpgv.jpg",
+      "https://res.cloudinary.com/mangud/image/upload/v1711190217/Marisela/Captura_de_pantalla_2024-03-21_a_la_s_23.21.24_hmewi0.png",
     imgTwo:
-      "https://res.cloudinary.com/mangud/image/upload/v1664984291/Marisela/Asociaci%C3%B3n_de_dibujantes_6_rdmtth.jpg",
+      "https://res.cloudinary.com/mangud/image/upload/v1711190218/Marisela/IMG_2661_blmttk.jpg",
     imgThree:
-      "https://res.cloudinary.com/mangud/image/upload/v1664984291/Marisela/Asociaci%C3%B3n_de_dibujantes_5_ba3wio.jpg",
+      "https://res.cloudinary.com/mangud/image/upload/v1711190220/Marisela/Sigilo_detalle_1_phfqhk.jpg",
     imgFour:
-      "https://res.cloudinary.com/mangud/image/upload/v1664984290/Marisela/Asociaci%C3%B3n_de_dibujantes_2_v2byzm.jpg",
+      "https://res.cloudinary.com/mangud/image/upload/v1711190221/Marisela/Sigilo_detalle_2_xvfugo.jpg",
     imgFive:
-      "https://res.cloudinary.com/mangud/image/upload/v1664984290/Marisela/Asociaci%C3%B3n_de_dibujantes_1_upnt0w.jpg",
+      "https://res.cloudinary.com/mangud/image/upload/v1711190225/Marisela/Sigilo_niigbh.jpg",
   },
   {
     id: 8,
     path: "/amanuense",
-    title: "Amanuense y pieza memes.",
-    description: "Pending.",
+    title: "Amanuense",
+    description:
+      "Amanuense es un proyecto en desarrollo que consiste en la transcripción a mano de ensayos sobre fotografía. Estas transcripciones son realizadas por alumnos de un curso de fotografía de una preparatoria local, quienes solicitan puntos adicionales para su materia o buscan alcanzar una calificación aprobatoria. Un amanuense es una persona que se dedica a escribir o transcribir textos a mano. En contextos históricos, los amanuenses eran copistas profesionales encargados de copiar manuscritos y documentos importantes antes de la invención de la imprenta. Su labor era fundamental para preservar y difundir el conocimiento en épocas en las que los libros eran producidos a mano.La primera versión de este trabajo se expuso como parte de las reflexiones en torno a prácticas arteducativas contrahegemónicas, en julio de 2023 en la Casa Taller José Clemente Orozco, en el cierre de la residencia “Esta semilla germinará” con Gabo Camnitzer y en colaboración con La Escuela.",
     imgOne:
-      "https://res.cloudinary.com/mangud/image/upload/v1664984999/Marisela/100_3646_amhjvv.jpg",
+      "https://res.cloudinary.com/mangud/image/upload/v1711189924/Marisela/IMG_0820_bfyval.jpg",
     imgTwo:
-      "https://res.cloudinary.com/mangud/image/upload/v1664985000/Marisela/IMG_6477_uteqya.jpg",
+      "https://res.cloudinary.com/mangud/image/upload/v1711189926/Marisela/IMG_0821_nv9jhw.jpg",
     imgThree:
-      "https://res.cloudinary.com/mangud/image/upload/v1664985000/Marisela/IMG_7439_wbybwh.jpg",
+      "https://res.cloudinary.com/mangud/image/upload/v1711189930/Marisela/IMG_4681_yupycc.jpg",
     imgFour:
-      "https://res.cloudinary.com/mangud/image/upload/v1664985001/Marisela/IMG_7371_soxe3o.jpg",
+      "https://res.cloudinary.com/mangud/image/upload/v1711189916/Marisela/IMG_0818_ymff0v.jpg",
     imgFive:
-      "https://res.cloudinary.com/mangud/image/upload/v1664985002/Marisela/IMG_2662_dlli3e.jpg",
+      "https://res.cloudinary.com/mangud/image/upload/v1711189937/Marisela/IMG_4684_2_jafczp.jpg",
+  },
+  {
+    id: 9,
+    path: "/pajaros",
+    title: "Pájaros.",
+    description: "Pending",
+    imgOne:
+      "https://res.cloudinary.com/mangud/image/upload/v1711190451/Marisela/Captura_de_pantalla_2024-03-21_a_la_s_23.36.47_wio87y.png",
+    imgTwo:
+      "https://res.cloudinary.com/mangud/image/upload/v1711190452/Marisela/Captura_de_pantalla_2024-03-21_a_la_s_23.37.16_d7h3rt.png",
+    imgThree:
+      "https://res.cloudinary.com/mangud/image/upload/v1711190453/Marisela/Captura_de_pantalla_2024-03-21_a_la_s_23.37.54_h3kyii.png",
+    imgFour:
+      "https://res.cloudinary.com/mangud/image/upload/v1711190455/Marisela/Captura_de_pantalla_2024-03-21_a_la_s_23.39.28_ayyqzz.png",
+    imgFive:
+      "https://res.cloudinary.com/mangud/image/upload/v1711191298/Marisela/mwktx3UUFFcBcEvW16sGa9CdHFOzzPbX_mqILJpNDKU.jpg_xz64bj.webp",
   },
 ];

@@ -54,13 +54,15 @@
   text-align: left;
 }
 
-.postTitleContainer p {
-  font-size: 0.8rem;
+.titleText {
+  font-size: 1rem;
 }
 
+.postLink {
+  text-decoration: none;
+}
 .postLink p {
   color: black;
-  text-decoration: none;
   font-size: 0.8rem;
 }
 

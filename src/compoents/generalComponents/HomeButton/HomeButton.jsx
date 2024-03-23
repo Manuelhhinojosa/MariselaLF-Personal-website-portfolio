@@ -5,7 +5,7 @@ const HomeButton = (props) => {
   return (
     <div className={s.home}>
       <Link className={s.homeLink} to="/">
-        <p className={s.buttonText}>home</p>
+        <p className={s.buttonText}>Inicio</p>
       </Link>
     </div>
   );

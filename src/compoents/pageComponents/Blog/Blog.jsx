@@ -137,7 +137,7 @@ export const Blog = (props) => {
                       });
                   }}
                 >
-                  me gusta
+                  Me gusta
                 </div>
 
                 <div className={s.likesCountContaier}>{post.likes}</div>
@@ -146,7 +146,7 @@ export const Blog = (props) => {
               {props.verificationState.isLogguedIn ? (
                 <div className={s.barContainer}>
                   <Link className={s.link} to="/edit" state={post}>
-                    <div className={s.btnContainer}>editar</div>
+                    <div className={s.btnContainer}>Editar</div>
                   </Link>
                   <div
                     className={s.btnContainer}
@@ -167,7 +167,7 @@ export const Blog = (props) => {
                         });
                     }}
                   >
-                    eliminar post
+                    Eliminar post
                   </div>
                 </div>
               ) : (
