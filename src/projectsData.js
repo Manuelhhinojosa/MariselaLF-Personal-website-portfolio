@@ -83,4 +83,54 @@ export const projectsData = [
     imgFive:
       "https://res.cloudinary.com/mangud/image/upload/v1666554761/Marisela/WhatsApp_Image_2022-10-23_at_3.51.23_PM_mlad1b.jpg",
   },
+  {
+    id: 6,
+    path: "/pangea",
+    title: "Pangea:",
+    description:
+      "Pangea es un proyecto de largo aliento en proceso. Ha sido realizado entre las ciudades de Berlín, Valencia, Guadalajara (MX) y La Paz (MX). A partir de la experimentación con diferentes técnicas y materiales, exploro temas relacionados con las relaciones afectivas y la geografía global.",
+    imgOne:
+      "https://res.cloudinary.com/mangud/image/upload/v1654778685/Marisela/imgOne_qbpmkj.jpg",
+    imgTwo:
+      "https://res.cloudinary.com/mangud/image/upload/v1654778685/Marisela/imgTwo_kzzgnk.jpg",
+    imgThree:
+      "https://res.cloudinary.com/mangud/image/upload/v1654778685/Marisela/imgFive_pwcv48.jpg",
+    imgFour:
+      "https://res.cloudinary.com/mangud/image/upload/v1654778685/Marisela/imgThree_gfvirf.jpg",
+    imgFive:
+      "https://res.cloudinary.com/mangud/image/upload/v1654778685/Marisela/imgFour_ebcyul.jpg",
+  },
+  {
+    id: 7,
+    path: "/sigilio",
+    title: "Sigilio:",
+    description:
+      "Sigilo es el nombre de una serie de móviles efímeros que se componen de intenciones codificadas a partir de números y reglas de composición visual. El carácter perecedero de los pétalos y su liviandad permiten que eventualmente las intenciones se liberen de su código material y regresen a su abstracción e inasibilidad.",
+    imgOne:
+      "https://res.cloudinary.com/mangud/image/upload/v1664984291/Marisela/Asociaci%C3%B3n_de_dibujantes_3_fxkpgv.jpg",
+    imgTwo:
+      "https://res.cloudinary.com/mangud/image/upload/v1664984291/Marisela/Asociaci%C3%B3n_de_dibujantes_6_rdmtth.jpg",
+    imgThree:
+      "https://res.cloudinary.com/mangud/image/upload/v1664984291/Marisela/Asociaci%C3%B3n_de_dibujantes_5_ba3wio.jpg",
+    imgFour:
+      "https://res.cloudinary.com/mangud/image/upload/v1664984290/Marisela/Asociaci%C3%B3n_de_dibujantes_2_v2byzm.jpg",
+    imgFive:
+      "https://res.cloudinary.com/mangud/image/upload/v1664984290/Marisela/Asociaci%C3%B3n_de_dibujantes_1_upnt0w.jpg",
+  },
+  {
+    id: 8,
+    path: "/amanuense",
+    title: "Amanuense y pieza memes.",
+    description: "Pending.",
+    imgOne:
+      "https://res.cloudinary.com/mangud/image/upload/v1664984999/Marisela/100_3646_amhjvv.jpg",
+    imgTwo:
+      "https://res.cloudinary.com/mangud/image/upload/v1664985000/Marisela/IMG_6477_uteqya.jpg",
+    imgThree:
+      "https://res.cloudinary.com/mangud/image/upload/v1664985000/Marisela/IMG_7439_wbybwh.jpg",
+    imgFour:
+      "https://res.cloudinary.com/mangud/image/upload/v1664985001/Marisela/IMG_7371_soxe3o.jpg",
+    imgFive:
+      "https://res.cloudinary.com/mangud/image/upload/v1664985002/Marisela/IMG_2662_dlli3e.jpg",
+  },
 ];

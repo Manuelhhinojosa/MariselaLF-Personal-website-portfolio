@@ -57,6 +57,15 @@ const NavBar = (props) => {
               <Link className={s.link} to="/laboratorio">
                 <div className={s.menuItemContainer}>cinco</div>
               </Link>
+              <Link className={s.link} to="/pangea">
+                <div className={s.menuItemContainer}>seis</div>
+              </Link>
+              <Link className={s.link} to="/sigilio">
+                <div className={s.menuItemContainer}>siete</div>
+              </Link>
+              <Link className={s.link} to="/amanuense">
+                <div className={s.menuItemContainer}>ocho</div>
+              </Link>
             </div>
 
             {props.navBarState.isLogguedIn ? (

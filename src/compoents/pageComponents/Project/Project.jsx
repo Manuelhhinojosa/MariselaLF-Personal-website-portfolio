@@ -78,7 +78,29 @@ const Project = (props) => {
               ""
             )}
 
-            {/*  */}
+            {props.project.id === 6 ? (
+              <div className={s.descText}>
+                <p>{props.project.description}</p>
+              </div>
+            ) : (
+              ""
+            )}
+
+            {props.project.id === 7 ? (
+              <div className={s.descText}>
+                <p>{props.project.description}</p>
+              </div>
+            ) : (
+              ""
+            )}
+
+            {props.project.id === 8 ? (
+              <div className={s.descText}>
+                <p>{props.project.description}</p>
+              </div>
+            ) : (
+              ""
+            )}
           </div>
           <div className={s.imagesContainer}>
             <div className={s.imageContainer}>

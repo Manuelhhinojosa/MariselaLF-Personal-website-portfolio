@@ -12,30 +12,37 @@ const About = () => {
         <div className={s.aboutContainer}>
           <div className={s.aboutTextContainer}>
             <p className={s.text}>
-              <span className={s.name}> Marisela L. Fierro</span> (Reside en
-              Zapopan, Jalisco, México)
-              <br />
-              <br />
-              <br />
-              Es artista y docente desde hace más de 15 años. Tiene interés por
+              {/* <p className={s.name}> Marisela L. Fierro</p> */}
+              Soy artista visual, docente e investigadora novel con interés por
               el estudio de la creatividad en procesos educativos y artísticos
-              contemporáneos, así como en el desarrollo de proyectos de
-              mediación artística y pedagogía contemporánea del arte. Su
-              formación es en Artes Visuales por la Universidad de Guadalajara;
-              es egresada de la Maestría en Educación y Expresión para las Artes
-              y de la Maestría en Psicología Educativa en la misma institución.
-              Ha dado cursos, talleres y charlas a docentes y alumnos de
-              preparatorias y licenciaturas en arte.
+              contemporáneos. Tengo formación en Artes Visuales por la
+              Universidad de Guadalajara (UdeG), Maestría en Educación y
+              Expresión para las Artes y Maestría en Psicología Educativa por la
+              misma institución. Trabajo como docente en la Prepa ITESO, en la
+              Escuela Preparatoria 7 y en la Maestría en Educación y Expresión
+              para las Artes. Tengo experiencia en el diseño de asignaturas
+              relacionadas con el arte, así como en proyectos de mediación
+              artística y arte colaborativo. Imparto cursos, talleres, asesorías
+              y charlas a profesores y estudiantes de arte en varias
+              instituciones.
               <br />
               <br />
               <br />
               <br />
-              Como creadora experimenta con dibujo, fotografía, técnicas mixtas,
-              objetos, textos y animación. Es parte de proyectos editoriales
-              colaborativos. Dirige, edita y diseña la revista DADA/Fanzine que
-              se distribuye en preparatorias y centros universitarios de la
-              UdeG. Este proyecto tiene el propósito de promover y difundir las
-              artes y la literatura de la comunidad.
+              Como creadora experimento con dibujo, fotografía técnicas mixtas,
+              objetos, texto y animación. En mis obras, indago en temas
+              autobiográficos, relaciones interpersonales, procesos educativos y
+              en algunas ciencias como la geografía y la psicología, generando
+              conexiones por medio de la yuxtaposición de conceptos codificados.
+              He participado en exposiciones colectivas en Guadalajara,
+              Guanajuato y los Ángeles y en diversas publicaciones editoriales
+              independientes y de instituciones como el Museo de Arte de Zapopan
+              o la UdeG.
+              <br />
+              <br />
+              <br />
+              Líneas de investigación: Arte contemporáneo, Educación artística,
+              Mediación artística, Género e inclusión.
             </p>
           </div>
           <div className={s.aboutImgContainer}>
