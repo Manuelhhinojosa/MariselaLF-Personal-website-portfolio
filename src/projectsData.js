@@ -53,7 +53,7 @@ export const projectsData = [
   {
     id: 4,
     path: "/dada",
-    title: "dada:",
+    title: "DADA:",
     description:
       "DADA (Disfrutando el Arte Desde Adentro), publicación semestral en formato de cartel plegable, es una revista-fanzine impresa y digital. Es un medio de expresión y acercamiento a la creación literaria y a las artes visuales principalmente para las y los estudiantes de la Preparatoria 7 de la Universidad de Guadalajara (UdeG); busca involucrarlos junto con el personal académico y administrativo, generando vínculos que dotan de un sentido de identidad a la institución. Actualmente, la revista cuenta con diez números publicados que se han distribuido en preparatorias y centros de la UdeG. DADA, a lo largo de 9 años de vida, ha sido semillero de diversos proyectos editoriales y talleres de creación literaria. Algunos escritores que han participado: Juan Nepote, Miguel Reinoso, Liliana Blum, Alejandro Zapa, Neri Tello, Abril Medina, Darío Carrillo, Luis Humberto Crosthwaite , Berónica Palacios, Cristina Meza, Cynthia Márquez, Fernanda García , Lorena Ortiz, Ana Patricia Espinosa, María Fernanda Hernández, Morishka Barragán, Paola Llamas. Artistas:  Jis, Curlystencil, Mónica Arreola, Carlos Torres, Pulse UNF, La Mujer Vampiro, entre otros.",
     imgOne:

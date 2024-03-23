@@ -43,28 +43,28 @@ const NavBar = (props) => {
               <div>proyectos:</div>
               <br />
               <Link className={s.link} to="/lacuerpaquesomos">
-                <div className={s.menuItemContainer}>uno</div>
+                <div className={s.menuItemContainer}>Cuerpa</div>
               </Link>
               <Link className={s.link} to="/asociacion">
-                <div className={s.menuItemContainer}>dos</div>
+                <div className={s.menuItemContainer}>Asociación</div>
               </Link>
               <Link className={s.link} to="/dif">
-                <div className={s.menuItemContainer}>tres</div>
+                <div className={s.menuItemContainer}>Expreso</div>
               </Link>
               <Link className={s.link} to="/dada">
-                <div className={s.menuItemContainer}>cuatro</div>
+                <div className={s.menuItemContainer}>DADA</div>
               </Link>
               <Link className={s.link} to="/laboratorio">
-                <div className={s.menuItemContainer}>cinco</div>
+                <div className={s.menuItemContainer}>Laboratorio</div>
               </Link>
               <Link className={s.link} to="/pangea">
-                <div className={s.menuItemContainer}>seis</div>
+                <div className={s.menuItemContainer}>Pangea</div>
               </Link>
               <Link className={s.link} to="/sigilio">
-                <div className={s.menuItemContainer}>siete</div>
+                <div className={s.menuItemContainer}>Sigilio</div>
               </Link>
               <Link className={s.link} to="/amanuense">
-                <div className={s.menuItemContainer}>ocho</div>
+                <div className={s.menuItemContainer}>Amanuense</div>
               </Link>
             </div>
 
