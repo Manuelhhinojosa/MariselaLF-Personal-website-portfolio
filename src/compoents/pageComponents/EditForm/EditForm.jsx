@@ -96,10 +96,8 @@ const EditForm = (props) => {
               }}
               ref={descriptionRef}
             ></textarea>
-            <button onClick={handleEdit}>Editar post</button>{" "}
-            <span>
-              <button onClick={handleCancel}>Cancelar</button>
-            </span>
+            <button onClick={handleEdit}>Editar post</button>
+            <button onClick={handleCancel}>Cancelar</button>
           </form>
         </div>
       </div>

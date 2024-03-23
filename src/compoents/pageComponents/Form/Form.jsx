@@ -82,6 +82,11 @@ const Form = (props) => {
       });
   };
 
+  const handleCancel = (e) => {
+    e.preventDefault();
+    navigate("/blogmain");
+  };
+
   return (
     <div className={s.formPageContainer}>
       <div className={s.top}>
@@ -135,6 +140,7 @@ const Form = (props) => {
               ref={descriptionRef}
             ></textarea>
             <button onClick={addPost}>Agregar post</button>
+            <button onClick={handleCancel}>Cancelar</button>
           </form>
         </div>
       </div>
