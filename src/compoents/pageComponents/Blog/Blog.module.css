@@ -175,6 +175,10 @@
   object-fit: contain;
 }
 
+.imgContainer img:hover {
+  cursor: none;
+}
+
 .likesContainer {
   width: 80%;
   height: fit-content;
