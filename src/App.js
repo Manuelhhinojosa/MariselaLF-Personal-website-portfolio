@@ -109,9 +109,9 @@ function App() {
 
         {posts.map((post) => (
           <Route
-            key={`/${post._id}`}
+            key={post._id}
             path={`/${post._id}`}
-            element={<SinglePost postState={post.state} />}
+            element={<SinglePost postState={postState} />}
           />
         ))}
       </Routes>
