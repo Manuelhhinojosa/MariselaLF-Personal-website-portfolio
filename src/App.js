@@ -14,6 +14,7 @@ import { Login } from "./compoents/pageComponents/Login/Login";
 import EditForm from "./compoents/pageComponents/EditForm/EditForm";
 import Form from "./compoents/pageComponents/Form/Form";
 import axios from "axios";
+import { SinglePost } from "./compoents/pageComponents/SinglePost/SinglePost";
 
 function App() {
   // NavBar state
@@ -81,6 +82,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/blogmain" element={<BlogHome postState={postState} />} />
+
         <Route
           path="/allposts"
           element={<Blog verificationState={verificationState} />}
@@ -88,19 +90,30 @@ function App() {
 
         {projectsData.map((project) => (
           <Route
-            key={project.id}
+            key={project._id}
             path={project.path}
             element={<Project project={project} />}
           />
         ))}
+
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login userState={userState} />} />
         <Route path="/add" element={<Form userState={userState} />} />
+
         <Route
           path="/edit"
           element={<EditForm verificationState={verificationState} />}
         />
+
         <Route path="*" element={<ErrorPage />} />
+
+        {posts.map((post) => (
+          <Route
+            key={`/${post._id}`}
+            path={`/${post._id}`}
+            element={<SinglePost postState={post.state} />}
+          />
+        ))}
       </Routes>
     </div>
   );

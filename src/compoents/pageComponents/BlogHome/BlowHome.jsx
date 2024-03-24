@@ -15,7 +15,7 @@ const BlogHome = (props) => {
           </div>
 
           {props.postState.posts.map((post) => (
-            <Link key={post.id} className={s.postLink} to="/test">
+            <Link key={post._id} className={s.postLink} to={`/${post._id}`}>
               <p>
                 *** {post.title} del {post.createdAt.slice(2, 10)} ***
               </p>
