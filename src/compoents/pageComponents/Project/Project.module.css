@@ -1,5 +1,5 @@
 .mainProjectContainer {
-  min-height: 250vh;
+  height: 215vh;
   flex: 7;
   display: flex;
   flex-direction: column;
@@ -8,7 +8,7 @@
 
 .topContainer {
   width: 100%;
-  height: 2%;
+  height: 3%;
   text-align: end;
   position: sticky;
   top: 0px;
@@ -19,16 +19,15 @@
 
 .bottomContainer {
   width: 100%;
-  height: 98%;
+  height: 97%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .projectContainer {
-  height: 95%;
+  height: 100%;
   width: 80%;
-  margin-top: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -73,6 +72,16 @@
   width: 90%;
   overflow: hidden;
   overflow-y: scroll;
+}
+
+.descText a {
+  color: black;
+  text-decoration: none;
+}
+
+.descText a:hover {
+  color: gray;
+  transition: 0.3s;
 }
 
 .descText::-webkit-scrollbar {

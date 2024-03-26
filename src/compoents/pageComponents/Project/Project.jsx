@@ -1,5 +1,6 @@
 import HomeButton from "../../generalComponents/HomeButton/HomeButton";
 import s from "./Project.module.css";
+import { Link } from "react-router-dom";
 
 const Project = (props) => {
   return (
@@ -106,7 +107,17 @@ const Project = (props) => {
 
             {props.project.id === 9 ? (
               <div className={s.descText}>
-                <p>{props.project.description}</p>
+                <p>{props.project.description.slice(0, 289)}</p>
+
+                <p>
+                  Ver {props.project.description.slice(384, 396)}{" "}
+                  <a href="https://www.instagram.com/reel/CuyRejAgSXS/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+                    aquí.
+                  </a>
+                </p>
+
+                <p>{props.project.description.slice(397, 406)}</p>
+                <p>{props.project.description.slice(407)}</p>
               </div>
             ) : (
               ""

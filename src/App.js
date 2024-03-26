@@ -27,6 +27,7 @@ function App() {
   // posts
   const [posts, setPosts] = useState([]);
   const getAllPostsUrl = "http://localhost:8000/posts/allposts";
+
   useEffect(() => {
     axios
       .get(getAllPostsUrl)
@@ -107,13 +108,17 @@ function App() {
 
         <Route path="*" element={<ErrorPage />} />
 
-        {posts.map((post) => (
-          <Route
-            key={post._id}
-            path={`/${post._id}`}
-            element={<SinglePost postState={postState} />}
-          />
-        ))}
+        {posts.map(
+          (
+            post // here
+          ) => (
+            <Route
+              key={post._id}
+              path={`/${post._id}`}
+              element={<SinglePost postState={postState} />}
+            />
+          )
+        )}
       </Routes>
     </div>
   );

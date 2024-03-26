@@ -3,6 +3,10 @@ import HomeButton from "../../generalComponents/HomeButton/HomeButton";
 import { Link } from "react-router-dom";
 
 const BlogHome = (props) => {
+  props.postState.posts.map((post) => {
+    console.log(post._id, "here");
+  }); //here
+
   return (
     <div className={s.blogHomeContainer}>
       <div className={s.top}>
@@ -16,9 +20,9 @@ const BlogHome = (props) => {
 
           {props.postState.posts.map((post) => (
             <Link
-              key={post._id + "2"}
+              key={post._id + "2"} // here for unique id?
               className={s.postLink}
-              to={`/${post._id}`}
+              to={`/${post._id}`} // here
             >
               <p>
                 *** {post.title} del {post.createdAt.slice(2, 10)} ***

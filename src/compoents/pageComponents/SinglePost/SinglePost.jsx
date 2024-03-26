@@ -1,9 +1,11 @@
 import s from "./singlePost.module.css";
 import HomeButton from "../../generalComponents/HomeButton/HomeButton";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 export const SinglePost = (props) => {
-  const id = window.location.href.slice(22);
+  const location = useLocation();
+  const id = location.pathname.slice(1);
   let post = {};
 
   props.postState.posts.map((p) => {
