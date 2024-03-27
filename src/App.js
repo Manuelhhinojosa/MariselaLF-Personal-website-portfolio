@@ -108,17 +108,13 @@ function App() {
 
         <Route path="*" element={<ErrorPage />} />
 
-        {posts.map(
-          (
-            post // here
-          ) => (
-            <Route
-              key={post._id}
-              path={`/${post._id}`}
-              element={<SinglePost postState={postState} />}
-            />
-          )
-        )}
+        {posts.map((post) => (
+          <Route
+            key={post._id}
+            path={`/${post.reference}`}
+            element={<SinglePost postState={postState} />}
+          />
+        ))}
       </Routes>
     </div>
   );

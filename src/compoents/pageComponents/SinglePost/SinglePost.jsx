@@ -4,13 +4,21 @@ import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
 export const SinglePost = (props) => {
-  const location = useLocation();
-  const id = location.pathname.slice(1);
+  let location = useLocation();
+  let reference = location.pathname.slice(1);
   let post = {};
 
+  // here
+
   props.postState.posts.map((p) => {
-    p._id = id ? (post = p) : (post = {});
+    p.reference === reference ? console.log(true) : console.log(false);
   });
+
+  // props.postState.posts.map((p) => {
+  //   p.reference === reference ? (post = p) : (post = {});
+  // });
+
+  // here
 
   return (
     <div className={s.siglePostContainer}>
