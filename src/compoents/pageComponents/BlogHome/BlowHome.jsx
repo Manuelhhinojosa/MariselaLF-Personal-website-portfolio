@@ -38,7 +38,7 @@ const BlogHome = (props) => {
         {props.postState.isLogguedIn ? (
           <div className={s.addContainer}>
             <Link className={s.postLink} to="/add">
-              <p>Agregar una publicacion.</p>
+              <p>Agregar una publicación.</p>
             </Link>
           </div>
         ) : (
