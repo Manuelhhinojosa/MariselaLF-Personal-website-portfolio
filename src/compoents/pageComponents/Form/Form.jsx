@@ -98,7 +98,7 @@ const Form = (props) => {
           <form className={s.form}>
             <input
               type="text"
-              placeholder="Titulo"
+              placeholder="Título"
               name="title"
               autoComplete="off"
               onChange={(e) => {
@@ -140,7 +140,7 @@ const Form = (props) => {
               }}
               ref={descriptionRef}
             ></textarea>
-            <button onClick={addPost}>Agregar post</button>
+            <button onClick={addPost}>Agregar publicación</button>
             <button onClick={handleCancel}>Cancelar</button>
           </form>
         </div>

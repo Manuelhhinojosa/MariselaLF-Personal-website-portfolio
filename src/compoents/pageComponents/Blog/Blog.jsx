@@ -145,7 +145,12 @@ export const Blog = (props) => {
 
               {props.verificationState.isLogguedIn ? (
                 <div className={s.barContainer}>
-                  <Link className={s.link} to="/edit" state={post}>
+                  <Link
+                    style={{ textDecoration: "none" }}
+                    className={s.linkContainer}
+                    to="/edit"
+                    state={post}
+                  >
                     <div className={s.btnContainer}>Editar</div>
                   </Link>
                   <div
