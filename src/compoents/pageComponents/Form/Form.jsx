@@ -85,7 +85,7 @@ const Form = (props) => {
 
   const handleCancel = (e) => {
     e.preventDefault();
-    navigate("/blogmain");
+    navigate(`/allposts`);
   };
 
   return (

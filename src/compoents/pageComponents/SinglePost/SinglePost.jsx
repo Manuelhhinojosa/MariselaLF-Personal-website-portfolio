@@ -44,12 +44,16 @@ export const SinglePost = (props) => {
 
           {/* if post is  media and media is image/gif */}
           {post.mimetype === "image/jpeg" ? (
-            <div className={s.imgContainer}></div>
+            <div className={s.imgContainer}>
+              <img src={post.media.url} alt="imgePost" />
+            </div>
           ) : (
             ""
           )}
           {post.mimetype === "image/png" ? (
-            <div className={s.imgContainer}></div>
+            <div className={s.imgContainer}>
+              <img src={post.media.url} alt="imgePost" />
+            </div>
           ) : (
             ""
           )}
@@ -62,37 +66,51 @@ export const SinglePost = (props) => {
             ""
           )}
           {post.mimetype === "image/gif" ? (
-            <div className={s.imgContainer}></div>
+            <div className={s.imgContainer}>
+              <img src={post.media.url} alt="imgePost" />
+            </div>
           ) : (
             ""
           )}
           {post.mimetype === "image/bmp" ? (
-            <div className={s.imgContainer}></div>
+            <div className={s.imgContainer}>
+              <img src={post.media.url} alt="imgePost" />
+            </div>
           ) : (
             ""
           )}
           {post.mimetype === "image/x-png" ? (
-            <div className={s.imgContainer}></div>
+            <div className={s.imgContainer}>
+              <img src={post.media.url} alt="imgePost" />
+            </div>
           ) : (
             ""
           )}
           {post.mimetype === "image/apng" ? (
-            <div className={s.imgContainer}></div>
+            <div className={s.imgContainer}>
+              <img src={post.media.url} alt="imgePost" />
+            </div>
           ) : (
             ""
           )}
           {post.mimetype === "image/avif" ? (
-            <div className={s.imgContainer}></div>
+            <div className={s.imgContainer}>
+              <img src={post.media.url} alt="imgePost" />
+            </div>
           ) : (
             ""
           )}
           {post.mimetype === "image/svg+xml" ? (
-            <div className={s.imgContainer}></div>
+            <div className={s.imgContainer}>
+              <img src={post.media.url} alt="imgePost" />
+            </div>
           ) : (
             ""
           )}
           {post.mimetype === "image/webp" ? (
-            <div className={s.imgContainer}></div>
+            <div className={s.imgContainer}>
+              <img src={post.media.url} alt="imgePost" />
+            </div>
           ) : (
             ""
           )}

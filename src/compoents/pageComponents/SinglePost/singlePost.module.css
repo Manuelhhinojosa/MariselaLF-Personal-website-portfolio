@@ -28,15 +28,13 @@
 
 .postContainer {
   width: 80%;
-  height: 80%;
+  height: 95%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   overflow: hidden;
   overflow-y: scroll;
-  border-bottom: 1px dashed black;
-  background-color: greenyellow;
 }
 
 .postContainer::-webkit-scrollbar {
@@ -52,14 +50,14 @@
 }
 
 .titleContainer {
-  position: absolute;
-  top: 0;
+  /* position: absolute; */
+  /* top: 0; */
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: sticky;
-  background-attachment: fixed;
+  /* position: sticky;
+  background-attachment: fixed; */
 }
 
 .titleContainer p {
@@ -133,6 +131,36 @@
   text-align: justify;
   margin: 1rem;
   font-size: 0.8rem;
+}
+
+.imgContainer {
+  width: 90%;
+  min-height: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.imgContainer img {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  object-fit: contain;
+}
+
+.imgContainer img:hover {
+  cursor: none;
+}
+
+.imgErrorContainer {
+  width: 90%;
+  min-height: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  text-align: center;
 }
 
 .likesContainer {
