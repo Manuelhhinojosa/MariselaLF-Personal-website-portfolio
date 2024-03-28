@@ -199,13 +199,20 @@
   transition: 0.3s;
   cursor: pointer;
 }
+.editContainer {
+  color: gray;
+}
+
+/* .deleteContainer {
+
+} */
 
 .linkContainer {
   width: fit-content;
 }
 
 .backText {
-  color: gray;
+  /* color: blue; */
   font-size: 0.75rem;
 }
 

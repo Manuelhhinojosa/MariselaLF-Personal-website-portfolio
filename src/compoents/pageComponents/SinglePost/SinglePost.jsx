@@ -2,8 +2,13 @@ import s from "./singlePost.module.css";
 import HomeButton from "../../generalComponents/HomeButton/HomeButton";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
+const getAllPostsUrl = "http://localhost:8000/posts/allposts";
 
 export const SinglePost = (props) => {
+  const navigate = useNavigate();
   let location = useLocation();
   let reference = location.pathname.slice(1);
   let post = {};
@@ -123,15 +128,43 @@ export const SinglePost = (props) => {
 
           {props.postState.isLogguedIn ? (
             <div className={s.barContainer}>
-              <div className={s.editContainer}>Editar</div>
-              <div className={s.deleteContainer}>Eliminar</div>
+              <Link
+                style={{ textDecoration: "none" }}
+                to={"/edit"}
+                state={post}
+              >
+                <div className={s.editContainer}>Editar</div>
+              </Link>
+              <div
+                className={s.deleteContainer}
+                onClick={() => {
+                  axios
+                    .delete(`http://localhost:8000/posts/${post._id}`)
+                    .then((result) => {
+                      axios.get(getAllPostsUrl).then((r) => {
+                        const updatedPosts2 = r.data;
+                        props.postState.setPosts(updatedPosts2.reverse());
+                        navigate("/blogmain");
+                      });
+                    })
+                    .catch((error) => {
+                      console.log("this is the error:", error);
+                    });
+                }}
+              >
+                Eliminar
+              </div>
             </div>
           ) : (
             ""
           )}
 
           <div className={s.linkContainer}>
-            <Link style={{ textDecoration: "none" }} to={`/blogmain`}>
+            <Link
+              style={{ textDecoration: "none" }}
+              to={`/blogmain`}
+              state={post}
+            >
               <p className={s.backText}> Volver</p>
             </Link>
           </div>

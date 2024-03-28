@@ -129,12 +129,12 @@
   margin: 1rem;
   background-color: transparent;
   border: none;
-  color: black;
-  font-family: "Titillium Web", sans-serif;
+  color: gray;
+  font-family: "andale mono";
 }
 
 .form button:hover {
-  opacity: 0.5;
-  transition: 0.5s;
+  color: black;
+  transition: 0.3s;
   cursor: pointer;
 }

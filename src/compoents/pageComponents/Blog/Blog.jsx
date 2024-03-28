@@ -124,7 +124,6 @@ export const Blog = (props) => {
                     axios
                       .patch(`http://localhost:8000/posts/${post._id}`)
                       .then((result) => {
-                        console.log(result);
                         axios.get(getAllPostsUrl).then((res) => {
                           const updatedPosts = res.data;
                           props.verificationState.setPosts(
@@ -159,7 +158,6 @@ export const Blog = (props) => {
                       axios
                         .delete(`http://localhost:8000/posts/${post._id}`)
                         .then((result) => {
-                          console.log(result);
                           axios.get(getAllPostsUrl).then((r) => {
                             const updatedPosts2 = r.data;
                             props.verificationState.setPosts(

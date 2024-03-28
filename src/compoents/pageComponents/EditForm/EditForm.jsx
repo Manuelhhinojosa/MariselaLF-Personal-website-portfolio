@@ -48,7 +48,7 @@ const EditForm = (props) => {
           props.verificationState.setPosts(allPostsAfterEditing.reverse());
         });
 
-        navigate("/allposts");
+        navigate(`/${post.reference}`);
       })
       .catch((error) => {
         console.log("this is the error", error);
@@ -96,7 +96,7 @@ const EditForm = (props) => {
               }}
               ref={descriptionRef}
             ></textarea>
-            <button onClick={handleEdit}>Editar post</button>
+            <button onClick={handleEdit}>Editar publicación</button>
             <button onClick={handleCancel}>Cancelar</button>
           </form>
         </div>
