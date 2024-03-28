@@ -8,17 +8,12 @@ export const SinglePost = (props) => {
   let reference = location.pathname.slice(1);
   let post = {};
 
-  // here
-
-  props.postState.posts.map((p) => {
-    p.reference === reference ? console.log(true) : console.log(false);
+  props.postState.posts.forEach((p) => {
+    if (p.reference === reference) {
+      post = p;
+      return;
+    }
   });
-
-  // props.postState.posts.map((p) => {
-  //   p.reference === reference ? (post = p) : (post = {});
-  // });
-
-  // here
 
   return (
     <div className={s.siglePostContainer}>

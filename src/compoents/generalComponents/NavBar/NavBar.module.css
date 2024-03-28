@@ -75,7 +75,7 @@
 .pageMenuContainerBottom2 {
   height: auto;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 .contactMenuContainer {

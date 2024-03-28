@@ -6,8 +6,8 @@ import { useState, useRef } from "react";
 import axios from "axios";
 
 const Form = (props) => {
-  // init state
   // // state to add a post
+  const reference = Math.floor(Math.random() * 10000000000).toString();
   const user = props.userState.user;
   const [title, setTitle] = useState("");
   const [mediaPost, setMediaPost] = useState("");
@@ -41,6 +41,7 @@ const Form = (props) => {
 
     const formData = new FormData();
 
+    formData.append("reference", reference);
     formData.append("user", user);
     formData.append("title", title);
     formData.append("text", textPost);
