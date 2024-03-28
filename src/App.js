@@ -69,7 +69,7 @@ function App() {
   };
 
   // BlogHome props
-
+  // single post props
   const postState = {
     posts,
     setPosts,

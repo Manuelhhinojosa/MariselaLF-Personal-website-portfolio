@@ -110,8 +110,38 @@
   text-decoration: underline;
   font-size: 1rem;
   text-align: justify;
-  font-weight: 100;
 }
+
+.descriptionContainer {
+  position: static;
+  width: 90%;
+  min-height: 5%;
+  max-height: 10%;
+  margin: 1rem;
+  padding: 1rem;
+  font-size: 0.75rem;
+  overflow: hidden;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+}
+
+.descriptionContainer::-webkit-scrollbar {
+  width: 0.1vw;
+}
+
+.descriptionContainer::-webkit-scrollbar-thumb {
+  background-color: black;
+}
+
+.descriptionContainer::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.descriptionContainer p {
+  text-align: justify;
+}
+
 .dateContainer {
   font-size: 0.75rem;
   width: 90%;
@@ -195,37 +225,8 @@
 
 .btnContainer:hover {
   color: black;
-  transition: 1s;
+  transition: 0.3s;
   cursor: pointer;
-}
-.descriptionContainer {
-  position: static;
-  width: 90%;
-  min-height: 5%;
-  max-height: 10%;
-  margin: 1rem;
-  padding: 1rem;
-  font-size: 0.75rem;
-  overflow: hidden;
-  overflow-y: scroll;
-  display: flex;
-  justify-content: center;
-}
-
-.descriptionContainer::-webkit-scrollbar {
-  width: 0.1vw;
-}
-
-.descriptionContainer::-webkit-scrollbar-thumb {
-  background-color: gray;
-}
-
-.descriptionContainer::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-
-.descriptionContainer p {
-  text-align: justify;
 }
 
 .barContainer {

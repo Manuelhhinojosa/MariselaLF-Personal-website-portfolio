@@ -167,7 +167,7 @@ export const Blog = (props) => {
                         });
                     }}
                   >
-                    Eliminar post
+                    Eliminar
                   </div>
                 </div>
               ) : (
