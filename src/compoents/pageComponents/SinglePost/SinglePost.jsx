@@ -122,7 +122,28 @@ export const SinglePost = (props) => {
           {/* end if post is  media and media is image/gif */}
 
           <div className={s.likesContainer}>
-            <div className={s.likesBtnContainer}>Me gusta</div>
+            {/* here  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */}
+
+            <div
+              className={s.likesBtnContainer}
+              onClick={() => {
+                axios
+                  .patch(`http://localhost:8000/posts/${post._id}`)
+                  .then((result) => {
+                    axios.get(getAllPostsUrl).then((res) => {
+                      const updatedPosts = res.data;
+                      props.postState.setPosts(updatedPosts.reverse());
+                    });
+                  })
+                  .catch((error) => {
+                    console.log("this is the error:", error);
+                  });
+              }}
+            >
+              Me gusta
+            </div>
+
+            {/* here */}
             <div className={s.likesCountContainer}>{post.likes}</div>
           </div>
 
