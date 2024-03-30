@@ -48,20 +48,23 @@ export const SinglePost = (props) => {
           {/* end if post is text */}
 
           {/* if post is  media and media is image/gif */}
-          {post.mimetype === "image/jpeg" ? (
+
+          {/* {post.media[0].mimetype === "image/png" ? (
+            <div className={s.imgContainer}>
+              <img src={post.media[0].url} alt="imgePost" />
+            </div>
+          ) : (
+            ""
+          )} */}
+
+          {/* {post.mimetype === "image/jpeg" ? (
             <div className={s.imgContainer}>
               <img src={post.media.url} alt="imgePost" />
             </div>
           ) : (
             ""
           )}
-          {post.mimetype === "image/png" ? (
-            <div className={s.imgContainer}>
-              <img src={post.media.url} alt="imgePost" />
-            </div>
-          ) : (
-            ""
-          )}
+
           {post.mimetype === "image/heic" ? (
             <div className={s.imgErrorContainer}>
               File type .heic not supported by browsers. To be used only iOS &
@@ -118,12 +121,10 @@ export const SinglePost = (props) => {
             </div>
           ) : (
             ""
-          )}
+          )} */}
           {/* end if post is  media and media is image/gif */}
 
           <div className={s.likesContainer}>
-            {/* here  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */}
-
             <div
               className={s.likesBtnContainer}
               onClick={() => {

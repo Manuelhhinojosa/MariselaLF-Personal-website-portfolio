@@ -38,20 +38,23 @@ export const Blog = (props) => {
               {/* end if post is text */}
 
               {/* if post is  media and media is image/gif */}
-              {post.mimetype === "image/jpeg" ? (
+
+              {/* {post.media[0].mimetype === "image/png" ? (
+                <div className={s.imgContainer}>
+                  <img src={post.media[0].url} alt="imgePost" />
+                </div>
+              ) : (
+                ""
+              )} */}
+
+              {/* {post.mimetype === "image/jpeg" ? (
                 <div className={s.imgContainer}>
                   <img src={post.media.url} alt="imgePost" />
                 </div>
               ) : (
                 ""
               )}
-              {post.mimetype === "image/png" ? (
-                <div className={s.imgContainer}>
-                  <img src={post.media.url} alt="imgePost" />
-                </div>
-              ) : (
-                ""
-              )}
+
               {post.mimetype === "image/heic" ? (
                 <div className={s.imgErrorContainer}>
                   File type .heic not supported by browsers. To be used only iOS
@@ -108,7 +111,7 @@ export const Blog = (props) => {
                 </div>
               ) : (
                 ""
-              )}
+              )} */}
               {/* end if post is  media and media is image/gif */}
 
               {/* if post is media and media audio */}
