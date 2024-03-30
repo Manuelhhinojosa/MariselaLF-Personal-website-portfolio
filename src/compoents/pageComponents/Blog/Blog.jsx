@@ -39,7 +39,7 @@ export const Blog = (props) => {
 
               {/* if post is  media and media is image/gif */}
 
-              {/* {post.media[0].mimetype === "image/png" ? (
+              {/* {post.media[].mimetype === "image/png" ? (
                 <div className={s.imgContainer}>
                   <img src={post.media[0].url} alt="imgePost" />
                 </div>
