@@ -34,7 +34,10 @@ const NavBar = (props) => {
             <Link className={s.link} to="/blogmain">
               <div className={s.menuItemContainer}>Blog</div>
             </Link>
-            <div className={(s.menuItemContainer, s.link)}>CV</div>
+
+            <Link className={s.link} to="/cv">
+              <div className={(s.menuItemContainer, s.link)}>CV</div>
+            </Link>
           </div>
 
           {/*  */}
