@@ -12,7 +12,7 @@ const About = () => {
         <div className={s.aboutContainer}>
           <div className={s.aboutTextContainer}>
             <p className={s.text}>
-              <p className={s.name}> Marisela L. Fierro</p>
+              <p className={s.name}> Marisela Fierro</p>
               Soy artista visual, docente e investigadora novel con interés por
               el estudio de la creatividad en procesos educativos y artísticos
               contemporáneos. Tengo formación en Artes Visuales por la

@@ -54,7 +54,7 @@ const Project = (props) => {
                 <p>
                   Equipo:
                   <br />
-                  Directora General: Marisela L. Fierro
+                  Directora General: Marisela Fierro
                   <br />
                   Coordinador Editorial: Pedro Valderrama Villanueva
                   <br />

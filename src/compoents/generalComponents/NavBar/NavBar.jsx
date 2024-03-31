@@ -34,6 +34,7 @@ const NavBar = (props) => {
             <Link className={s.link} to="/blogmain">
               <div className={s.menuItemContainer}>Blog</div>
             </Link>
+            <div className={(s.menuItemContainer, s.link)}>CV</div>
           </div>
 
           {/*  */}
@@ -42,21 +43,6 @@ const NavBar = (props) => {
             <div className={s.pageMenuContainerBottom1}>
               <div>Proyectos:</div>
               <br />
-              <Link className={s.link} to="/lacuerpaquesomos">
-                <div className={s.menuItemContainer}>Cuerpa</div>
-              </Link>
-              <Link className={s.link} to="/asociacion">
-                <div className={s.menuItemContainer}>Asociación</div>
-              </Link>
-              <Link className={s.link} to="/dif">
-                <div className={s.menuItemContainer}>Expreso</div>
-              </Link>
-              <Link className={s.link} to="/dada">
-                <div className={s.menuItemContainer}>DADA</div>
-              </Link>
-              <Link className={s.link} to="/laboratorio">
-                <div className={s.menuItemContainer}>Laboratorio</div>
-              </Link>
               <Link className={s.link} to="/pangea">
                 <div className={s.menuItemContainer}>Pangea</div>
               </Link>
@@ -66,8 +52,23 @@ const NavBar = (props) => {
               <Link className={s.link} to="/amanuense">
                 <div className={s.menuItemContainer}>Amanuense</div>
               </Link>
+              <Link className={s.link} to="/lacuerpaquesomos">
+                <div className={s.menuItemContainer}>Cuerpa</div>
+              </Link>
+              <Link className={s.link} to="/dada">
+                <div className={s.menuItemContainer}>DADA/fanzine</div>
+              </Link>
               <Link className={s.link} to="/duelo">
                 <div className={s.menuItemContainer}>Duelo</div>
+              </Link>
+              <Link className={s.link} to="/asociacion">
+                <div className={s.menuItemContainer}>Asociación</div>
+              </Link>
+              <Link className={s.link} to="/laboratorio">
+                <div className={s.menuItemContainer}>Laboratorio</div>
+              </Link>
+              <Link className={s.link} to="/dif">
+                <div className={s.menuItemContainer}>Expreso</div>
               </Link>
             </div>
 
