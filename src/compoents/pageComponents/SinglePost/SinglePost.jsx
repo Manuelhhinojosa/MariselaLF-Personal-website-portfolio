@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { useRef, useState } from "react"; // 1
+import { useState } from "react";
 
 export const SinglePost = (props) => {
   const navigate = useNavigate();
@@ -20,7 +20,6 @@ export const SinglePost = (props) => {
     }
   });
 
-  let imageRef = useRef(null); // 2
   const [index, setIndex] = useState(0);
 
   const handlePrev = () => {
@@ -60,12 +59,9 @@ export const SinglePost = (props) => {
 
           {/* if post is  media and media is image/gif */}
 
-          {/* here */}
-
           {post.media.length > 0 ? (
             <div className={s.imgContainer}>
-              <img src={post.media[index].url} ref={imageRef} alt="imgePost" />
-              {/* ref attribure  3*/}
+              <img src={post.media[index].url} alt="imgePost" />
 
               {post.media.length > 1 ? (
                 <div className={s.btnsContainer}>
@@ -88,8 +84,6 @@ export const SinglePost = (props) => {
           ) : (
             ""
           )}
-
-          {/* here */}
 
           {/* end if post is  media and media is image/gif */}
 
