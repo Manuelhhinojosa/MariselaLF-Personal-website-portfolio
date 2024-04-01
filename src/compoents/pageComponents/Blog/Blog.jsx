@@ -179,9 +179,15 @@ export const Blog = (props) => {
                 </div>
 
                 <div className={s.likesCountContaier}>
+                  {post.likes === 0 ? `A nadie le gusta.` : ""}
+
                   {post.likes === 1
                     ? `A ${post.likes} persona le ha gustado esta publicación.`
-                    : `A ${post.likes} personas les ha gustado esta publicación.`}
+                    : ""}
+
+                  {post.likes > 1
+                    ? `A ${post.likes} personas les ha gustado esta publicación.`
+                    : ""}
                 </div>
               </div>
 
