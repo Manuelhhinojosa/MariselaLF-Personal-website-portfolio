@@ -1,6 +1,7 @@
 import s from "./About.module.css";
 import aboutImg from "../../../images/aboutPage/aboutImg.png";
 import HomeButton from "../../generalComponents/HomeButton/HomeButton";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -43,8 +44,15 @@ const About = () => {
               <br />
               Líneas de investigación: Arte contemporáneo, Educación artística,
               Mediación artística, Género e inclusión.
+              <br />
+              <br />
+              <br />
+              <Link className={s.link} to="/cv">
+                <div>Currículum vitae</div>
+              </Link>
             </p>
           </div>
+
           <div className={s.aboutImgContainer}>
             <img className={s.aboutImg} src={aboutImg} alt="about" />
           </div>
