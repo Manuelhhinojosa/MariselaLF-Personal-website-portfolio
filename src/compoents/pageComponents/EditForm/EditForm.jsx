@@ -78,14 +78,33 @@ const EditForm = (props) => {
               }}
               ref={titleRef}
             />
-            {post.media ? (
+
+            {post.text.length > 0 ? (
+              <div className={s.textPost}>{post.text}</div>
+            ) : (
+              ""
+            )}
+
+            {post.media.length > 0 ? (
               <div className={s.imgPost}>
-                <img src={post.media.url}></img>
+                <img src={post.media[0].url}></img>
               </div>
             ) : (
               ""
             )}
-            {post.text ? <div className={s.textPost}>{post.text}</div> : ""}
+
+            {post.video ? (
+              <div className={s.videoPost}>
+                <iframe
+                  allowFullScreen
+                  src={post.video}
+                  frameborder="0"
+                ></iframe>
+              </div>
+            ) : (
+              ""
+            )}
+
             <textarea
               placeholder={post.description}
               name="description"

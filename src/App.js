@@ -15,6 +15,7 @@ import EditForm from "./compoents/pageComponents/EditForm/EditForm";
 import Form from "./compoents/pageComponents/Form/Form";
 import axios from "axios";
 import { SinglePost } from "./compoents/pageComponents/SinglePost/SinglePost";
+import CV from "./compoents/pageComponents/CV/CV";
 
 function App() {
   // NavBar state
@@ -106,8 +107,6 @@ function App() {
           element={<EditForm verificationState={verificationState} />}
         />
 
-        <Route path="*" element={<ErrorPage />} />
-
         {posts.map((post) => (
           <Route
             key={post._id}
@@ -115,6 +114,9 @@ function App() {
             element={<SinglePost postState={postState} />}
           />
         ))}
+
+        <Route path="/cv" element={<CV />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>
   );

@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
-const getAllPostsUrl = "http://localhost:8000/posts/allposts";
+import { useState } from "react";
 
 export const SinglePost = (props) => {
   const navigate = useNavigate();
   let location = useLocation();
+  const getAllPostsUrl = "http://localhost:8000/posts/allposts";
   let reference = location.pathname.slice(1);
   let post = {};
 
@@ -19,6 +19,16 @@ export const SinglePost = (props) => {
       return;
     }
   });
+
+  const [index, setIndex] = useState(0);
+
+  const handlePrev = () => {
+    setIndex((prevIndex) => Math.max(prevIndex - 1, 0));
+  };
+
+  const handleNext = () => {
+    setIndex((prevIndex) => Math.min(prevIndex + 1, post.media.length - 1));
+  };
 
   return (
     <div className={s.siglePostContainer}>
@@ -47,83 +57,49 @@ export const SinglePost = (props) => {
           )}
           {/* end if post is text */}
 
+          {/* if post is video */}
+
+          {post.video ? (
+            <div className={s.videoContainer}>
+              <iframe allowFullScreen src={post.video} frameborder="0"></iframe>
+            </div>
+          ) : (
+            ""
+          )}
+
+          {/* end if post is video */}
+
           {/* if post is  media and media is image/gif */}
-          {post.mimetype === "image/jpeg" ? (
+
+          {post.media.length > 0 ? (
             <div className={s.imgContainer}>
-              <img src={post.media.url} alt="imgePost" />
+              <img src={post.media[index].url} alt="imgePost" />
+
+              {post.media.length > 1 ? (
+                <div className={s.btnsContainer}>
+                  <button className={s.sliderButton} onClick={handlePrev}>
+                    {`<<<`}
+                  </button>
+
+                  <div className={s.mediaAmount}>{`${index + 1} de ${
+                    post.media.length
+                  }`}</div>
+
+                  <button className={s.sliderButton} onClick={handleNext}>
+                    {`>>>`}
+                  </button>
+                </div>
+              ) : (
+                ""
+              )}
             </div>
           ) : (
             ""
           )}
-          {post.mimetype === "image/png" ? (
-            <div className={s.imgContainer}>
-              <img src={post.media.url} alt="imgePost" />
-            </div>
-          ) : (
-            ""
-          )}
-          {post.mimetype === "image/heic" ? (
-            <div className={s.imgErrorContainer}>
-              File type .heic not supported by browsers. To be used only iOS &
-              Mac mobile/web apps. Convert to jpeg/png/...
-            </div>
-          ) : (
-            ""
-          )}
-          {post.mimetype === "image/gif" ? (
-            <div className={s.imgContainer}>
-              <img src={post.media.url} alt="imgePost" />
-            </div>
-          ) : (
-            ""
-          )}
-          {post.mimetype === "image/bmp" ? (
-            <div className={s.imgContainer}>
-              <img src={post.media.url} alt="imgePost" />
-            </div>
-          ) : (
-            ""
-          )}
-          {post.mimetype === "image/x-png" ? (
-            <div className={s.imgContainer}>
-              <img src={post.media.url} alt="imgePost" />
-            </div>
-          ) : (
-            ""
-          )}
-          {post.mimetype === "image/apng" ? (
-            <div className={s.imgContainer}>
-              <img src={post.media.url} alt="imgePost" />
-            </div>
-          ) : (
-            ""
-          )}
-          {post.mimetype === "image/avif" ? (
-            <div className={s.imgContainer}>
-              <img src={post.media.url} alt="imgePost" />
-            </div>
-          ) : (
-            ""
-          )}
-          {post.mimetype === "image/svg+xml" ? (
-            <div className={s.imgContainer}>
-              <img src={post.media.url} alt="imgePost" />
-            </div>
-          ) : (
-            ""
-          )}
-          {post.mimetype === "image/webp" ? (
-            <div className={s.imgContainer}>
-              <img src={post.media.url} alt="imgePost" />
-            </div>
-          ) : (
-            ""
-          )}
+
           {/* end if post is  media and media is image/gif */}
 
           <div className={s.likesContainer}>
-            {/* here  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */}
-
             <div
               className={s.likesBtnContainer}
               onClick={() => {
@@ -144,7 +120,17 @@ export const SinglePost = (props) => {
             </div>
 
             {/* here */}
-            <div className={s.likesCountContainer}>{post.likes}</div>
+            <div className={s.likesCountContainer}>
+              {post.likes === 0 ? `A nadie le gusta.` : ""}
+
+              {post.likes === 1
+                ? `A ${post.likes} persona le ha gustado esta publicación.`
+                : ""}
+
+              {post.likes > 1
+                ? `A ${post.likes} personas les ha gustado esta publicación.`
+                : ""}
+            </div>
           </div>
 
           {props.postState.isLogguedIn ? (

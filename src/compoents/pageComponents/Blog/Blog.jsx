@@ -2,10 +2,15 @@ import s from "./Blog.module.css";
 import HomeButton from "../../generalComponents/HomeButton/HomeButton";
 import axios from "axios";
 import { Link } from "react-router-dom";
-
-const getAllPostsUrl = "http://localhost:8000/posts/allposts";
+import { useState } from "react";
 
 export const Blog = (props) => {
+  const getAllPostsUrl = "http://localhost:8000/posts/allposts";
+
+  const index1 = 0;
+  const [index2, setIndex2] = useState(0);
+  const [index3, setIndex3] = useState(0);
+
   return (
     <div className={s.blogPageContainer}>
       <div className={s.top}>
@@ -37,78 +42,112 @@ export const Blog = (props) => {
               )}
               {/* end if post is text */}
 
+              {/* if post is video */}
+
+              {post.video ? (
+                <div className={s.videoContainer}>
+                  <iframe
+                    allowFullScreen
+                    src={post.video}
+                    frameborder="0"
+                  ></iframe>
+                </div>
+              ) : (
+                ""
+              )}
+
+              {/* end if post is video */}
+
               {/* if post is  media and media is image/gif */}
-              {post.mimetype === "image/jpeg" ? (
+
+              {post.media.length === 1 ? (
                 <div className={s.imgContainer}>
-                  <img src={post.media.url} alt="imgePost" />
+                  <img src={post.media[index1].url} alt="imgePost" />
                 </div>
               ) : (
                 ""
               )}
-              {post.mimetype === "image/png" ? (
+
+              {/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */}
+
+              {post.media.length === 2 ? (
                 <div className={s.imgContainer}>
-                  <img src={post.media.url} alt="imgePost" />
+                  <img src={post.media[index2].url} alt="imgePost" />
+
+                  {post.media.length === 2 ? (
+                    <div className={s.btnsContainer}>
+                      <button
+                        className={s.sliderButton}
+                        onClick={() => {
+                          setIndex2((prevIndex) => Math.max(prevIndex - 1, 0));
+                        }}
+                      >
+                        {`<<<`}
+                      </button>
+
+                      <div className={s.mediaAmount}>{`${index2 + 1} de ${
+                        post.media.length
+                      }`}</div>
+
+                      <button
+                        className={s.sliderButton}
+                        onClick={() => {
+                          setIndex2((prevIndex) =>
+                            Math.min(prevIndex + 1, post.media.length - 1)
+                          );
+                        }}
+                      >
+                        {`>>>`}
+                      </button>
+                    </div>
+                  ) : (
+                    ""
+                  )}
                 </div>
               ) : (
                 ""
               )}
-              {post.mimetype === "image/heic" ? (
-                <div className={s.imgErrorContainer}>
-                  File type .heic not supported by browsers. To be used only iOS
-                  & Mac mobile/web apps. Convert to jpeg/png/...
-                </div>
-              ) : (
-                ""
-              )}
-              {post.mimetype === "image/gif" ? (
+
+              {/* ++++++++++++++++++++++++++++++++++++++++++++++++ */}
+
+              {post.media.length === 3 ? (
                 <div className={s.imgContainer}>
-                  <img src={post.media.url} alt="imgePost" />
+                  <img src={post.media[index3].url} alt="imgePost" />
+
+                  {post.media.length === 3 ? (
+                    <div className={s.btnsContainer}>
+                      <button
+                        className={s.sliderButton}
+                        onClick={() => {
+                          setIndex3((prevIndex) => Math.max(prevIndex - 1, 0));
+                        }}
+                      >
+                        {`<<<`}
+                      </button>
+
+                      <div className={s.mediaAmount}>{`${index3 + 1} de ${
+                        post.media.length
+                      }`}</div>
+
+                      <button
+                        className={s.sliderButton}
+                        onClick={() => {
+                          setIndex3((prevIndex) =>
+                            Math.min(prevIndex + 1, post.media.length - 1)
+                          );
+                        }}
+                      >
+                        {`>>>`}
+                      </button>
+                    </div>
+                  ) : (
+                    ""
+                  )}
                 </div>
               ) : (
                 ""
               )}
-              {post.mimetype === "image/bmp" ? (
-                <div className={s.imgContainer}>
-                  <img src={post.media.url} alt="imgePost" />
-                </div>
-              ) : (
-                ""
-              )}
-              {post.mimetype === "image/x-png" ? (
-                <div className={s.imgContainer}>
-                  <img src={post.media.url} alt="imgePost" />
-                </div>
-              ) : (
-                ""
-              )}
-              {post.mimetype === "image/apng" ? (
-                <div className={s.imgContainer}>
-                  <img src={post.media.url} alt="imgePost" />
-                </div>
-              ) : (
-                ""
-              )}
-              {post.mimetype === "image/avif" ? (
-                <div className={s.imgContainer}>
-                  <img src={post.media.url} alt="imgePost" />
-                </div>
-              ) : (
-                ""
-              )}
-              {post.mimetype === "image/svg+xml" ? (
-                <div className={s.imgContainer}>
-                  <img src={post.media.url} alt="imgePost" />
-                </div>
-              ) : (
-                ""
-              )}
-              {post.mimetype === "image/webp" ? (
-                <div className={s.imgContainer}>
-                  <img src={post.media.url} alt="imgePost" />
-                </div>
-              ) : (
-                ""
-              )}
+
               {/* end if post is  media and media is image/gif */}
 
               {/* if post is media and media audio */}
@@ -139,7 +178,17 @@ export const Blog = (props) => {
                   Me gusta
                 </div>
 
-                <div className={s.likesCountContaier}>{post.likes}</div>
+                <div className={s.likesCountContaier}>
+                  {post.likes === 0 ? `A nadie le gusta.` : ""}
+
+                  {post.likes === 1
+                    ? `A ${post.likes} persona le ha gustado esta publicación.`
+                    : ""}
+
+                  {post.likes > 1
+                    ? `A ${post.likes} personas les ha gustado esta publicación.`
+                    : ""}
+                </div>
               </div>
 
               {props.verificationState.isLogguedIn ? (

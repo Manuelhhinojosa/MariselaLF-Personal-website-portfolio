@@ -37,11 +37,12 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  background-color: yellowgreen;
 }
 
 .form input:nth-child(1) {
   width: 60%;
-  height: 4rem;
+  height: 2rem;
   border: none;
   border-bottom: 1px solid transparent;
   font-family: "andale mono";
@@ -57,24 +58,10 @@
   outline: none;
 }
 
-.form input::file-selector-button {
-  background-color: white;
-  border: 1px solid black;
-  font-family: "Titillium Web", sans-serif;
-  margin: 1rem;
-}
-
-.form input::file-selector-button:hover {
-  cursor: pointer;
-}
-
-.form input::file-selector-button:focus {
-  outline: none;
-}
-
 .imgPost {
   height: 50%;
   width: auto;
+  margin-top: 3rem;
 }
 
 .imgPost img {
@@ -98,14 +85,13 @@
   justify-content: center;
   text-align: justify;
   font-weight: 100;
-  margin: 1rem;
+  margin: 1.5rem;
   font-size: 0.8rem;
 }
 
 .textPost:hover {
   cursor: not-allowed;
 }
-
 .form textarea {
   width: 80%;
   border: none;

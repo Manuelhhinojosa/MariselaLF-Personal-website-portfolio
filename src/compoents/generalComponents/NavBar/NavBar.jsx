@@ -42,21 +42,6 @@ const NavBar = (props) => {
             <div className={s.pageMenuContainerBottom1}>
               <div>Proyectos:</div>
               <br />
-              <Link className={s.link} to="/lacuerpaquesomos">
-                <div className={s.menuItemContainer}>Cuerpa</div>
-              </Link>
-              <Link className={s.link} to="/asociacion">
-                <div className={s.menuItemContainer}>Asociación</div>
-              </Link>
-              <Link className={s.link} to="/dif">
-                <div className={s.menuItemContainer}>Expreso</div>
-              </Link>
-              <Link className={s.link} to="/dada">
-                <div className={s.menuItemContainer}>DADA</div>
-              </Link>
-              <Link className={s.link} to="/laboratorio">
-                <div className={s.menuItemContainer}>Laboratorio</div>
-              </Link>
               <Link className={s.link} to="/pangea">
                 <div className={s.menuItemContainer}>Pangea</div>
               </Link>
@@ -66,8 +51,23 @@ const NavBar = (props) => {
               <Link className={s.link} to="/amanuense">
                 <div className={s.menuItemContainer}>Amanuense</div>
               </Link>
+              <Link className={s.link} to="/lacuerpaquesomos">
+                <div className={s.menuItemContainer}>Cuerpa</div>
+              </Link>
+              <Link className={s.link} to="/dada">
+                <div className={s.menuItemContainer}>DADA/fanzine</div>
+              </Link>
               <Link className={s.link} to="/duelo">
                 <div className={s.menuItemContainer}>Duelo</div>
+              </Link>
+              <Link className={s.link} to="/asociacion">
+                <div className={s.menuItemContainer}>Asociación</div>
+              </Link>
+              <Link className={s.link} to="/laboratorio">
+                <div className={s.menuItemContainer}>Laboratorio</div>
+              </Link>
+              <Link className={s.link} to="/dif">
+                <div className={s.menuItemContainer}>Expreso</div>
               </Link>
             </div>
 
@@ -107,17 +107,17 @@ const NavBar = (props) => {
           </Link>
         </div>
         <div className={s.contactMenuItemContainer}>
-          <a href="https://www.linkedin.com/in/mariselalf">
+          <a href="https://www.linkedin.com/in/mariselalf" target="_blank">
             <img src={linkedInImg} alt="linkedIn-icon" />
           </a>
         </div>
         <div className={s.contactMenuItemContainer}>
-          <a href="https://www.instagram.com/marisela_con_ese/">
+          <a href="https://www.instagram.com/marisela_con_ese/" target="_blank">
             <img src={igImg} alt="ig-icon" />
           </a>
         </div>
         <div className={s.contactMenuItemContainer}>
-          <a href="https://www.twitter.com/marisela_con_s">
+          <a href="https://www.twitter.com/marisela_con_s" target="_blank">
             <img src={twitterImg} alt="twitter-icon" />
           </a>
         </div>
