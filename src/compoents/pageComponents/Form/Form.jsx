@@ -13,10 +13,12 @@ const Form = (props) => {
   const user = props.userState.user;
   const reference = Math.floor(Math.random() * 10000000000).toString();
   const likes = 0;
+  const [video, setVideo] = useState("");
 
   // useRef state
   const titleRef = useRef("");
   const mediaRef = useRef(null);
+  const videoRef = useRef("");
   const textRef = useRef("");
   const descriptionRef = useRef("");
   const navigate = useNavigate();
@@ -31,13 +33,13 @@ const Form = (props) => {
   const addPost = (e) => {
     e.preventDefault();
 
-    if (title === "" || descriptionPost === "") {
-      titleRef.current.focus();
-      return;
-    } else if (mediaPost.length === 0 && textPost === "") {
-      titleRef.current.focus();
-      return;
-    }
+    // if (title === "" || descriptionPost === "") {
+    //   titleRef.current.focus();
+    //   return;
+    // } else if (mediaPost.length === 0 && textPost === "") {
+    //   titleRef.current.focus();
+    //   return;
+    // }
 
     const formData = new FormData();
 
@@ -47,7 +49,13 @@ const Form = (props) => {
     formData.append("text", textPost);
     formData.append("description", descriptionPost);
     formData.append("likes", likes);
-    mediaPost.forEach((file) => formData.append("media", file)); // looping to assign all files selected in postMedia var to formData object.
+    formData.append("video", video);
+    mediaPost.forEach((file) => formData.append("media", file));
+
+    // console.log("here is the formData info:");
+    // for (var pair of formData.entries()) {
+    //   console.log(pair[0] + ", " + pair[1]);
+    // }
 
     const url = "http://localhost:8000/posts/create";
 
@@ -58,11 +66,13 @@ const Form = (props) => {
         mediaRef.current.value = "";
         textRef.current.value = "";
         descriptionRef.current.value = "";
+        videoRef.current.value = "";
 
         setTitle("");
         setMediaPost([]);
         setTextPost("");
         setDescriptionPost("");
+        setVideo("");
 
         const getAllPostsUrl = "http://localhost:8000/posts/allposts";
 
@@ -97,7 +107,18 @@ const Form = (props) => {
               onChange={(e) => setTitle(e.target.value)}
               ref={titleRef}
             />
-            <div className={s.test}>
+
+            <input
+              className={s.videoInput}
+              type="text"
+              placeholder="Liga para video"
+              name="video"
+              autoComplete="off"
+              onChange={(e) => setVideo(e.target.value)}
+              ref={videoRef}
+            />
+
+            <div>
               <label htmlFor="media">Media</label>
               <input
                 type="file"

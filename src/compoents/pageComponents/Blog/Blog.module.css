@@ -154,7 +154,20 @@
   font-size: 0.8rem;
 }
 
-/* here */
+.videoContainer {
+  width: 70%;
+  height: 45%;
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.videoContainer iframe {
+  width: 560px;
+  height: 315px;
+}
 
 .imgContainer {
   width: 90%;
@@ -195,8 +208,6 @@
   transition: 0.3s;
   cursor: pointer;
 }
-
-/* here */
 
 .imgErrorContainer {
   width: 90%;

@@ -57,6 +57,18 @@ export const SinglePost = (props) => {
           )}
           {/* end if post is text */}
 
+          {/* if post is video */}
+
+          {post.video ? (
+            <div className={s.videoContainer}>
+              <iframe allowFullScreen src={post.video} frameborder="0"></iframe>
+            </div>
+          ) : (
+            ""
+          )}
+
+          {/* end if post is video */}
+
           {/* if post is  media and media is image/gif */}
 
           {post.media.length > 0 ? (
@@ -109,7 +121,9 @@ export const SinglePost = (props) => {
 
             {/* here */}
             <div className={s.likesCountContainer}>
-              A {post.likes} personas les ha gustado esta publicación.
+              {post.likes === 1
+                ? `A ${post.likes} persona le ha gustado esta publicación.`
+                : `A ${post.likes} personas les ha gustado esta publicación.`}
             </div>
           </div>
 

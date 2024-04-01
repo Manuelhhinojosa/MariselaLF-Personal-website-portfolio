@@ -78,6 +78,7 @@ const EditForm = (props) => {
               }}
               ref={titleRef}
             />
+
             {post.text.length > 0 ? (
               <div className={s.textPost}>{post.text}</div>
             ) : (
@@ -87,6 +88,18 @@ const EditForm = (props) => {
             {post.media.length > 0 ? (
               <div className={s.imgPost}>
                 <img src={post.media[0].url}></img>
+              </div>
+            ) : (
+              ""
+            )}
+
+            {post.video ? (
+              <div className={s.videoPost}>
+                <iframe
+                  allowFullScreen
+                  src={post.video}
+                  frameborder="0"
+                ></iframe>
               </div>
             ) : (
               ""
