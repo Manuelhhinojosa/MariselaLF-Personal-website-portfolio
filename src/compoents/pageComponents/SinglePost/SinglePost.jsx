@@ -50,7 +50,11 @@ export const SinglePost = (props) => {
           {/* if post is text  */}
           {post.text ? (
             <div className={s.textContainer}>
-              <p>{post.text}</p>
+              <p>
+                {post.text.split("\n").map((line, index) => (
+                  <p key={index}>{line}</p>
+                ))}
+              </p>
             </div>
           ) : (
             ""
