@@ -70,7 +70,7 @@ const EditForm = (props) => {
           <form className={s.form}>
             <input
               type="text"
-              placeholder={post.title}
+              placeholder={`${post.title} (Campo obligatorio)`}
               name="title"
               autocomplete="off"
               onChange={(e) => {
@@ -106,7 +106,7 @@ const EditForm = (props) => {
             )}
 
             <textarea
-              placeholder={post.description}
+              placeholder={`${post.description} (Campo obligatorio)`}
               name="description"
               cols="auto"
               rows="auto"

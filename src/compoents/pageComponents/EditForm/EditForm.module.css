@@ -37,7 +37,6 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-color: yellowgreen;
 }
 
 .form input:nth-child(1) {
@@ -92,10 +91,12 @@
 .textPost:hover {
   cursor: not-allowed;
 }
+
 .form textarea {
   width: 80%;
   border: none;
   font-family: "andale mono";
+  text-align: center;
   margin: 1rem;
   border-bottom: 1px solid transparent;
 }
@@ -115,12 +116,12 @@
   margin: 1rem;
   background-color: transparent;
   border: none;
-  color: gray;
+  color: black;
   font-family: "andale mono";
 }
 
 .form button:hover {
-  color: black;
+  color: gray;
   transition: 0.3s;
   cursor: pointer;
 }

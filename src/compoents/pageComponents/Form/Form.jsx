@@ -33,13 +33,13 @@ const Form = (props) => {
   const addPost = (e) => {
     e.preventDefault();
 
-    // if (title === "" || descriptionPost === "") {
-    //   titleRef.current.focus();
-    //   return;
-    // } else if (mediaPost.length === 0 && textPost === "") {
-    //   titleRef.current.focus();
-    //   return;
-    // }
+    if (title === "" || descriptionPost === "") {
+      titleRef.current.focus();
+      return;
+    } else if (mediaPost.length === 0 && textPost === "" && video === "") {
+      titleRef.current.focus();
+      return;
+    }
 
     const formData = new FormData();
 
@@ -101,12 +101,24 @@ const Form = (props) => {
           <form className={s.form} encType="multipart/form-data">
             <input
               type="text"
-              placeholder="Título"
+              placeholder="Título (Campo obligatorio)"
               name="title"
               autoComplete="off"
               onChange={(e) => setTitle(e.target.value)}
               ref={titleRef}
             />
+            <textarea
+              placeholder="Descripción (Campo obligatorio)"
+              name="description"
+              cols="auto"
+              rows="auto"
+              onChange={(e) => setDescriptionPost(e.target.value)}
+              ref={descriptionRef}
+            ></textarea>
+
+            <div className={s.directionsText}>
+              Elige sólo uno de los siguientes campos.
+            </div>
 
             <input
               className={s.videoInput}
@@ -138,14 +150,7 @@ const Form = (props) => {
               onChange={(e) => setTextPost(e.target.value)}
               ref={textRef}
             ></textarea>
-            <textarea
-              placeholder="Descripción"
-              name="description"
-              cols="auto"
-              rows="auto"
-              onChange={(e) => setDescriptionPost(e.target.value)}
-              ref={descriptionRef}
-            ></textarea>
+
             <button onClick={addPost}>Agregar publicación</button>
             <button onClick={handleCancel}>Cancelar</button>
           </form>
