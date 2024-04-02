@@ -1,15 +1,17 @@
 import HomeButton from "../../generalComponents/HomeButton/HomeButton";
 import s from "./Contact.module.css";
-import emailjs from "@emailjs/browser";
+
 import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-  const [sent, setSent] = useState(false);
   const formRef = useRef(null);
   const nameRef = useRef(null);
   const subjectRef = useRef(null);
   const emailRef = useRef(null);
   const messageRef = useRef(null);
+
+  const [sent, setSent] = useState(false);
 
   const handleUserData = (e) => {
     e.preventDefault();
@@ -25,10 +27,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_b3bqjep",
-        "template_ubefjka",
-        formRef.current,
-        "7RhgiDzoqn1bPUjZk"
+        "service_b3bqjep", // service ID
+        "template_ubefjka", // template ID
+        formRef.current, // form data
+        "7RhgiDzoqn1bPUjZk" // key
       )
       .then(
         (result) => {
@@ -42,7 +44,7 @@ const Contact = () => {
     subjectRef.current.value = "";
     emailRef.current.value = "";
     messageRef.current.value = "";
-    // nameRef.current.focus();
+    nameRef.current.focus();
   };
 
   const handleSent = () => {
