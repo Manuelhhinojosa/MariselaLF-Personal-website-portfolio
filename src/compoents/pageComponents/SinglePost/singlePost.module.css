@@ -50,14 +50,10 @@
 }
 
 .titleContainer {
-  /* position: absolute; */
-  /* top: 0; */
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* position: sticky;
-  background-attachment: fixed; */
 }
 
 .titleContainer p {
@@ -238,10 +234,6 @@
 .editContainer {
   color: gray;
 }
-
-/* .deleteContainer {
-
-} */
 
 .linkContainer {
   width: fit-content;
