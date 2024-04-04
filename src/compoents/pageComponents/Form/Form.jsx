@@ -117,7 +117,7 @@ const Form = (props) => {
             ></textarea>
 
             <div className={s.directionsText}>
-              Elige sólo uno de los siguientes campos.
+              *** Elige sólo uno de los siguientes campos. ***
             </div>
 
             <input

@@ -83,7 +83,7 @@ const Contact = () => {
             />
             <textarea
               name="message"
-              rows="5"
+              rows="10"
               placeholder="Mensaje"
               ref={messageRef}
             ></textarea>

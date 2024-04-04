@@ -27,11 +27,12 @@
 }
 
 .listContainer {
+  margin-top: 2rem;
   width: 50%;
   height: 75%;
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: flex-start;
   justify-content: top;
   overflow: hidden;
   overflow-y: scroll;
@@ -50,17 +51,19 @@
 }
 
 .postTitleContainer {
-  width: 100%;
-  text-align: left;
+  width: 50%;
+  position: sticky;
+  top: 0;
 }
 
 .titleText {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .postLink {
   text-decoration: none;
 }
+
 .postLink p {
   color: black;
   font-size: 0.8rem;
@@ -69,4 +72,26 @@
 .postLink p:hover {
   color: gray;
   transition: 0.3s;
+}
+
+.allPostsLinkContainer {
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .blogHomeContainer {
+    min-height: 100vh;
+  }
+  .top {
+    margin-top: 2rem;
+  }
+
+  .listContainer {
+    height: 65vh;
+    width: 90%;
+  }
+
+  .postTitleContainer {
+    text-align: center;
+  }
 }

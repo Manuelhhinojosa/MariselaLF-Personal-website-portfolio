@@ -57,7 +57,7 @@ const EditForm = (props) => {
 
   const handleCancel = (e) => {
     e.preventDefault();
-    navigate("/allposts");
+    navigate(`/${post.reference}`);
   };
 
   return (
@@ -80,7 +80,11 @@ const EditForm = (props) => {
             />
 
             {post.text.length > 0 ? (
-              <div className={s.textPost}>{post.text}</div>
+              <div className={s.textPost}>
+                {post.text.split("\n").map((line, index) => (
+                  <p key={index}>{line}</p>
+                ))}
+              </div> // here
             ) : (
               ""
             )}

@@ -27,7 +27,7 @@
 
 .formContainer {
   height: 70%;
-  width: 40%;
+  width: 70%;
 }
 
 .form {
@@ -81,11 +81,23 @@
   overflow: hidden;
   overflow-y: scroll;
   display: flex;
-  justify-content: center;
-  text-align: justify;
-  font-weight: 100;
+  flex-direction: column;
   margin: 1.5rem;
   font-size: 0.8rem;
+  text-align: justify;
+  padding: 1rem;
+}
+
+.textPost::-webkit-scrollbar {
+  width: 0.1vw;
+}
+
+.textPost::-webkit-scrollbar-thumb {
+  background-color: black;
+}
+
+.textPost::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 
 .textPost:hover {
@@ -124,4 +136,33 @@
   color: gray;
   transition: 0.3s;
   cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .top {
+    margin-top: 2rem;
+  }
+  .editFormContainer {
+    min-height: 100vh;
+  }
+
+  .formContainer {
+    min-width: fit-content;
+  }
+
+  .form {
+    min-height: 80vh;
+  }
+
+  .imgPost {
+    text-align: center;
+  }
+
+  .imgPost img {
+    max-width: 50%;
+  }
+
+  .textPost {
+    max-height: 40vh;
+  }
 }
