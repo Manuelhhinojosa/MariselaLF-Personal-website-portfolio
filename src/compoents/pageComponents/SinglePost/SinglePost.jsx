@@ -65,7 +65,12 @@ export const SinglePost = (props) => {
 
           {post.video ? (
             <div className={s.videoContainer}>
-              <iframe allowFullScreen src={post.video} frameborder="0"></iframe>
+              <iframe
+                title={post.reference}
+                allowFullScreen
+                src={post.video}
+                frameborder="0"
+              ></iframe>
             </div>
           ) : (
             ""
@@ -125,15 +130,11 @@ export const SinglePost = (props) => {
 
             {/* here */}
             <div className={s.likesCountContainer}>
-              {post.likes === 0 ? `A nadie le gusta.` : ""}
+              {post.likes === 0 ? `0 Me gusta.` : ""}
 
-              {post.likes === 1
-                ? `A ${post.likes} persona le ha gustado esta publicación.`
-                : ""}
+              {post.likes === 1 ? `${post.likes} Me gusta.` : ""}
 
-              {post.likes > 1
-                ? `A ${post.likes} personas les ha gustado esta publicación.`
-                : ""}
+              {post.likes > 1 ? `${post.likes} Me gusta.` : ""}
             </div>
           </div>
 

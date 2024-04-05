@@ -97,6 +97,10 @@
     justify-content: space-between;
   }
 
+  .top {
+    margin-top: 2rem;
+  }
+
   .aboutContainer {
     flex-direction: column;
     justify-content: center;

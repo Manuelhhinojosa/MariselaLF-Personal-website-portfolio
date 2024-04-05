@@ -26,8 +26,8 @@
 }
 
 .formContainer {
-  height: 85%;
-  width: 40%;
+  height: 100%;
+  width: 80%;
 }
 
 .form {
@@ -35,7 +35,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -51,10 +51,6 @@
 .form input:nth-child(1):hover {
   border-bottom: 1px solid black;
   transition: 0.3s;
-}
-
-.form input:nth-child(2) {
-  border-bottom: 1px solid transparent;
 }
 
 .videoInput {
@@ -106,7 +102,7 @@
 }
 
 .directionsText {
-  color: gray;
+  color: red;
   font-size: 0.7rem;
 }
 
@@ -130,7 +126,6 @@
 .form button {
   width: auto;
   height: 5%;
-  margin: 1rem;
   background-color: transparent;
   border: none;
   color: black;
@@ -141,4 +136,18 @@
   opacity: 0.3;
   transition: 0.3s;
   cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .top {
+    margin-top: 2rem;
+  }
+
+  .formPageContainer {
+    min-height: 110vh;
+  }
+
+  .form {
+    min-height: 100vh;
+  }
 }

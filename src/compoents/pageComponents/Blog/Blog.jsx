@@ -51,6 +51,7 @@ export const Blog = (props) => {
               {post.video ? (
                 <div className={s.videoContainer}>
                   <iframe
+                    title={post.reference}
                     allowFullScreen
                     src={post.video}
                     frameborder="0"
@@ -71,8 +72,6 @@ export const Blog = (props) => {
               ) : (
                 ""
               )}
-
-              {/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */}
 
               {post.media.length === 2 ? (
                 <div className={s.imgContainer}>
@@ -111,8 +110,6 @@ export const Blog = (props) => {
               ) : (
                 ""
               )}
-
-              {/* ++++++++++++++++++++++++++++++++++++++++++++++++ */}
 
               {post.media.length === 3 ? (
                 <div className={s.imgContainer}>
@@ -154,12 +151,6 @@ export const Blog = (props) => {
 
               {/* end if post is  media and media is image/gif */}
 
-              {/* if post is media and media audio */}
-              {/* end if post is media and media isaudio */}
-
-              {/* if post is media and media is video */}
-              {/* end if post is media and media is video */}
-
               <div className={s.likesContainer}>
                 <div
                   className={s.btnContainer}
@@ -183,15 +174,11 @@ export const Blog = (props) => {
                 </div>
 
                 <div className={s.likesCountContaier}>
-                  {post.likes === 0 ? `A nadie le gusta.` : ""}
+                  {post.likes === 0 ? `0 Me gusta.` : ""}
 
-                  {post.likes === 1
-                    ? `A ${post.likes} persona le ha gustado esta publicación.`
-                    : ""}
+                  {post.likes === 1 ? `${post.likes} Me gusta.` : ""}
 
-                  {post.likes > 1
-                    ? `A ${post.likes} personas les ha gustado esta publicación.`
-                    : ""}
+                  {post.likes > 1 ? `${post.likes} Me gusta.` : ""}
                 </div>
               </div>
 

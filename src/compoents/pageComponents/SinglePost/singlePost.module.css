@@ -109,8 +109,10 @@
 }
 
 .videoContainer iframe {
-  width: 560px;
-  height: 315px;
+  /* width: 560px;
+  height: 315px; */
+  width: 60%;
+  height: 70%;
 }
 
 .textContainer {
@@ -247,4 +249,30 @@
 .backText:hover {
   color: black;
   transition: 0.3s;
+}
+
+@media screen and (max-width: 600px) {
+  .siglePostContainer {
+    min-height: 100vh;
+  }
+
+  .top {
+    margin-top: 2rem;
+  }
+
+  .postContainer {
+    margin: 3rem;
+  }
+
+  .textContainer {
+    max-height: 30vh;
+  }
+
+  .btnsContainer {
+    margin-top: 1rem;
+  }
+
+  .likesContainer {
+    margin-top: 1rem;
+  }
 }

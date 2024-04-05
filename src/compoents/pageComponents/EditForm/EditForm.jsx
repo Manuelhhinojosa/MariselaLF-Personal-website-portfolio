@@ -57,7 +57,7 @@ const EditForm = (props) => {
 
   const handleCancel = (e) => {
     e.preventDefault();
-    navigate("/allposts");
+    navigate(`/${post.reference}`);
   };
 
   return (
@@ -80,14 +80,18 @@ const EditForm = (props) => {
             />
 
             {post.text.length > 0 ? (
-              <div className={s.textPost}>{post.text}</div>
+              <div className={s.textPost}>
+                {post.text.split("\n").map((line, index) => (
+                  <p key={index}>{line}</p>
+                ))}
+              </div> // here
             ) : (
               ""
             )}
 
             {post.media.length > 0 ? (
               <div className={s.imgPost}>
-                <img src={post.media[0].url}></img>
+                <img alt="Element to be edited" src={post.media[0].url}></img>
               </div>
             ) : (
               ""
@@ -96,6 +100,7 @@ const EditForm = (props) => {
             {post.video ? (
               <div className={s.videoPost}>
                 <iframe
+                  title={post.reference}
                   allowFullScreen
                   src={post.video}
                   frameborder="0"

@@ -8,7 +8,7 @@
 
 .topContainer {
   width: 100%;
-  height: 3%;
+  height: 5%;
   text-align: end;
   position: sticky;
   top: 0px;
@@ -75,12 +75,12 @@
 }
 
 .descText a {
-  color: black;
+  color: gray;
   text-decoration: none;
 }
 
 .descText a:hover {
-  color: gray;
+  color: black;
   transition: 0.3s;
 }
 
@@ -136,6 +136,10 @@
 }
 
 @media screen and (max-width: 600px) {
+  .topContainer {
+    margin-top: 2rem;
+  }
+
   .mainProjectContainer {
     min-height: auto;
   }

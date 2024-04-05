@@ -9,11 +9,10 @@ const BlogHome = (props) => {
         <HomeButton />
       </div>
       <div className={s.bottom}>
+        <div className={s.postTitleContainer}>
+          <p className={s.titleText}>Publicaciones:</p>
+        </div>
         <div className={s.listContainer}>
-          <div className={s.postTitleContainer}>
-            <p className={s.titleText}>Publicaciones:</p>
-          </div>
-
           {props.postState.posts.map((post) => (
             <Link
               key={post.reference}
@@ -37,7 +36,11 @@ const BlogHome = (props) => {
 
         {props.postState.isLogguedIn ? (
           <div className={s.addContainer}>
-            <Link className={s.postLink} to="/add">
+            <Link
+              className={s.postLink}
+              style={{ textDecoration: "none" }}
+              to="/add"
+            >
               <p>Agregar una publicación.</p>
             </Link>
           </div>

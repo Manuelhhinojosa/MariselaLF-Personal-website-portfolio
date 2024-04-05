@@ -10,3 +10,9 @@
   font-weight: 200;
   color: darkgray;
 }
+
+@media screen and (max-width: 600px) {
+  .errorPageContainer {
+    min-height: 100vh;
+  }
+}
