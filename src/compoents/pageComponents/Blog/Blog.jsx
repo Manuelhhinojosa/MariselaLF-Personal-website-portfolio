@@ -51,6 +51,7 @@ export const Blog = (props) => {
               {post.video ? (
                 <div className={s.videoContainer}>
                   <iframe
+                    title={post.reference}
                     allowFullScreen
                     src={post.video}
                     frameborder="0"

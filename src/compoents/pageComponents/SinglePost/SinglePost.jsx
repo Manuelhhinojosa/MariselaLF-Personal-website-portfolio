@@ -65,7 +65,12 @@ export const SinglePost = (props) => {
 
           {post.video ? (
             <div className={s.videoContainer}>
-              <iframe allowFullScreen src={post.video} frameborder="0"></iframe>
+              <iframe
+                title={post.reference}
+                allowFullScreen
+                src={post.video}
+                frameborder="0"
+              ></iframe>
             </div>
           ) : (
             ""

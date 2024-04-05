@@ -91,7 +91,7 @@ const EditForm = (props) => {
 
             {post.media.length > 0 ? (
               <div className={s.imgPost}>
-                <img src={post.media[0].url}></img>
+                <img alt="Element to be edited" src={post.media[0].url}></img>
               </div>
             ) : (
               ""
@@ -100,6 +100,7 @@ const EditForm = (props) => {
             {post.video ? (
               <div className={s.videoPost}>
                 <iframe
+                  title={post.reference}
                   allowFullScreen
                   src={post.video}
                   frameborder="0"
