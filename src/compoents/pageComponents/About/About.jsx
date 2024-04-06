@@ -1,7 +1,6 @@
 import s from "./About.module.css";
 import aboutImg from "../../../images/aboutPage/aboutImg.png";
 import HomeButton from "../../generalComponents/HomeButton/HomeButton";
-import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -47,9 +46,12 @@ const About = () => {
               <br />
               <br />
               <br />
-              <Link className={s.link} to="/cv">
-                <div>Currículum vitae</div>
-              </Link>
+              <a
+                href="https://chipper-platypus-f8d2a8.netlify.app/cv.pdf"
+                target="_blank"
+              >
+                Currículum vitae
+              </a>
             </p>
           </div>
 

@@ -15,7 +15,6 @@ import EditForm from "./compoents/pageComponents/EditForm/EditForm";
 import Form from "./compoents/pageComponents/Form/Form";
 import axios from "axios";
 import { SinglePost } from "./compoents/pageComponents/SinglePost/SinglePost";
-import CV from "./compoents/pageComponents/CV/CV";
 
 function App() {
   // NavBar state
@@ -115,7 +114,6 @@ function App() {
           />
         ))}
 
-        <Route path="/cv" element={<CV />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>
