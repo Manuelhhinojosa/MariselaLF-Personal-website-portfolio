@@ -64,18 +64,18 @@
   font-size: 1rem;
 }
 
-.link {
+.aboutImgContainer {
+  flex: 1;
+}
+
+a {
   color: gray;
   text-decoration: none;
 }
 
-.link:hover {
+a:hover {
   color: black;
   transition: 0.3s;
-}
-
-.aboutImgContainer {
-  flex: 1;
 }
 
 .aboutImg {
