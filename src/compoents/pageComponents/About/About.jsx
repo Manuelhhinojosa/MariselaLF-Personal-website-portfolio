@@ -49,6 +49,7 @@ const About = () => {
               <a
                 href="https://mariselafierrocv.netlify.app/cv.pdf"
                 target="_blank"
+                rel="noreferrer"
               >
                 Currículum vitae
               </a>
