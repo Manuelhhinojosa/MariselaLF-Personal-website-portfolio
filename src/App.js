@@ -79,10 +79,12 @@ function App() {
   return (
     <div className={s.appContainer}>
       <NavBar navBarState={navBarState} />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/blogmain" element={<BlogHome postState={postState} />} />
+
         {projectsData.map((project) => (
           <Route
             key={project._id}
@@ -90,12 +92,14 @@ function App() {
             element={<Project project={project} />}
           />
         ))}
+
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login userState={userState} />} />
         <Route
           path="/allposts"
           element={<Blog verificationState={verificationState} />}
         />
+
         {posts.map((post) => (
           <Route
             key={post._id}
