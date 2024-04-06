@@ -83,12 +83,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/blogmain" element={<BlogHome postState={postState} />} />
-
-        <Route
-          path="/allposts"
-          element={<Blog verificationState={verificationState} />}
-        />
-
         {projectsData.map((project) => (
           <Route
             key={project._id}
@@ -96,16 +90,12 @@ function App() {
             element={<Project project={project} />}
           />
         ))}
-
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login userState={userState} />} />
-        <Route path="/add" element={<Form userState={userState} />} />
-
         <Route
-          path="/edit"
-          element={<EditForm verificationState={verificationState} />}
+          path="/allposts"
+          element={<Blog verificationState={verificationState} />}
         />
-
         {posts.map((post) => (
           <Route
             key={post._id}
@@ -113,7 +103,11 @@ function App() {
             element={<SinglePost postState={postState} />}
           />
         ))}
-
+        <Route path="/add" element={<Form userState={userState} />} />
+        <Route
+          path="/edit"
+          element={<EditForm verificationState={verificationState} />}
+        />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>
