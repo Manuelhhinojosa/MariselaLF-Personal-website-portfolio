@@ -53,13 +53,18 @@ const Project = (props) => {
                 <p>
                   Equipo:
                   <br />
+                  <br />
                   Directora General: Marisela Fierro
+                  <br />
                   <br />
                   Coordinador Editorial: Pedro Valderrama Villanueva
                   <br />
+                  <br />
                   Corrección de textos: Diego Vázquez y Ana Lilia Larios
                   <br />
+                  <br />
                   Diseño Gráfico y Edición de Imagen: Marisela L. Fierro
+                  <br />
                   <br />
                   Colaborador: Víctor Villalobos
                 </p>

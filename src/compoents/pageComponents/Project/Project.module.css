@@ -97,7 +97,6 @@
 }
 
 .descText p {
-  font-weight: 100;
   padding-left: 1rem;
   padding-right: 1rem;
   font-size: 0.8rem;
@@ -145,8 +144,8 @@
   }
 
   .descContainer {
+    min-height: 40vh;
     max-height: 50vh;
-    margin-bottom: 5rem;
     margin-top: 3rem;
     overflow: hidden;
     overflow-y: scroll;
