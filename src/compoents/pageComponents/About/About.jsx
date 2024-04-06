@@ -47,7 +47,7 @@ const About = () => {
               <br />
               <br />
               <a
-                href="https://chipper-platypus-f8d2a8.netlify.app/cv.pdf"
+                href="https://mariselafierrocv.netlify.app/cv.pdf"
                 target="_blank"
               >
                 Currículum vitae
