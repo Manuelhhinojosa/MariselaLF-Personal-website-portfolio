@@ -103,11 +103,22 @@ function App() {
             element={<SinglePost postState={postState} />}
           />
         ))}
-        <Route path="/add" element={<Form userState={userState} />} />
-        <Route
-          path="/edit"
-          element={<EditForm verificationState={verificationState} />}
-        />
+
+        {isLogguedIn ? (
+          <Route path="/add" element={<Form userState={userState} />} />
+        ) : (
+          ""
+        )}
+
+        {isLogguedIn ? (
+          <Route
+            path="/edit"
+            element={<EditForm verificationState={verificationState} />}
+          />
+        ) : (
+          ""
+        )}
+
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>
