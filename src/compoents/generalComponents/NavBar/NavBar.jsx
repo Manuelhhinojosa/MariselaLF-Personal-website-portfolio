@@ -107,17 +107,29 @@ const NavBar = (props) => {
           </Link>
         </div>
         <div className={s.contactMenuItemContainer}>
-          <a href="https://www.linkedin.com/in/mariselalf" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/mariselalf"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src={linkedInImg} alt="linkedIn-icon" />
           </a>
         </div>
         <div className={s.contactMenuItemContainer}>
-          <a href="https://www.instagram.com/marisela_con_ese/" target="_blank">
+          <a
+            href="https://www.instagram.com/marisela_con_ese/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src={igImg} alt="ig-icon" />
           </a>
         </div>
         <div className={s.contactMenuItemContainer}>
-          <a href="https://www.twitter.com/marisela_con_s" target="_blank">
+          <a
+            href="https://www.twitter.com/marisela_con_s"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src={twitterImg} alt="twitter-icon" />
           </a>
         </div>

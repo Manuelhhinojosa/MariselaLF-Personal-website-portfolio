@@ -1,6 +1,5 @@
 import HomeButton from "../../generalComponents/HomeButton/HomeButton";
 import s from "./Project.module.css";
-import { Link } from "react-router-dom";
 
 const Project = (props) => {
   return (
