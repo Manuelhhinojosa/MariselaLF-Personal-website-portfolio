@@ -39,7 +39,7 @@
 }
 
 .listContainer::-webkit-scrollbar {
-  width: 0.1vw;
+  width: 1px;
 }
 
 .listContainer::-webkit-scrollbar-thumb {
@@ -89,6 +89,10 @@
   .listContainer {
     height: 65vh;
     width: 90%;
+  }
+
+  .listContainer::-webkit-scrollbar {
+    width: 1.5px;
   }
 
   .postTitleContainer {

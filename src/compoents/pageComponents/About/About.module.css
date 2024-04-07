@@ -42,7 +42,7 @@
 }
 
 .aboutTextContainer::-webkit-scrollbar {
-  width: 0.1vw;
+  width: 1px;
 }
 
 .aboutTextContainer::-webkit-scrollbar-thumb {
@@ -114,5 +114,9 @@ a:hover {
 
   .text {
     padding: 20px;
+  }
+
+  .aboutTextContainer::-webkit-scrollbar {
+    width: 1.5px;
   }
 }

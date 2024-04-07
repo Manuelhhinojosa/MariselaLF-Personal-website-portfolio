@@ -89,7 +89,7 @@
 }
 
 .textPost::-webkit-scrollbar {
-  width: 0.1vw;
+  width: 1px;
 }
 
 .textPost::-webkit-scrollbar-thumb {
@@ -152,6 +152,10 @@
 
   .form {
     min-height: 80vh;
+  }
+
+  .textPost::-webkit-scrollbar {
+    width: 1.5px;
   }
 
   .imgPost {

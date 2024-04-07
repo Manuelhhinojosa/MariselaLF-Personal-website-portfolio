@@ -56,8 +56,8 @@
 }
 
 .descText {
-  height: 70%;
-  width: 90%;
+  height: 100%;
+  width: 100%;
   overflow: hidden;
   overflow-y: scroll;
 }
@@ -73,7 +73,7 @@
 }
 
 .descText::-webkit-scrollbar {
-  width: 0.1vw;
+  width: 1px;
 }
 
 .descText::-webkit-scrollbar-thumb {
@@ -88,7 +88,6 @@
   padding-left: 1rem;
   padding-right: 1rem;
   font-size: 0.8rem;
-  margin: 1rem;
   text-align: justify;
 }
 
@@ -137,6 +136,10 @@
     overflow: hidden;
     overflow-y: scroll;
     align-items: flex-start;
+  }
+
+  .descText::-webkit-scrollbar {
+    width: 1.5px;
   }
 
   .imagesContainer {

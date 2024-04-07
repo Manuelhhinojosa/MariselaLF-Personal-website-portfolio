@@ -14,8 +14,6 @@ const Project = (props) => {
             <p>{props.project.title}</p>{" "}
           </div>
           <div className={s.descContainer}>
-            {/*  */}
-
             {props.project.id === 1 ? (
               <div className={s.descText}>
                 <p>{props.project.description.slice(0, 385)}</p>
