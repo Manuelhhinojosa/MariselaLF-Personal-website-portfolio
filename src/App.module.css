@@ -1,7 +1,7 @@
 .appContainer {
   display: flex;
   flex-direction: row;
-  font-family: "andale mono";
+  font-family: "andale mono", "Reddit Mono", monospace;
 }
 
 @media screen and (max-width: 600px) {

@@ -170,7 +170,7 @@
 .btnsContainer button {
   background-color: transparent;
   border: none;
-  font-family: "andale mono";
+  font-family: "andale mono", "Reddit Mono", monospace;
   color: gray;
 }
 
@@ -181,7 +181,7 @@
 }
 
 .mediaAmount {
-  font-family: "andale mono";
+  font-family: "andale mono", "Reddit Mono", monospace;
   font-size: 0.7rem;
   color: gray;
 }

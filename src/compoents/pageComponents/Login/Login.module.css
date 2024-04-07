@@ -47,7 +47,7 @@
   width: 50%;
   border: none;
   border-bottom: 1px solid transparent;
-  font-family: "andale mono";
+  font-family: "andale mono", "Reddit Mono", monospace;
 }
 
 .loginForm input:hover {
@@ -65,7 +65,7 @@
   background-color: transparent;
   border: none;
   color: black;
-  font-family: "andale mono";
+  font-family: "andale mono", "Reddit Mono", monospace;
 }
 
 .loginForm button:hover {

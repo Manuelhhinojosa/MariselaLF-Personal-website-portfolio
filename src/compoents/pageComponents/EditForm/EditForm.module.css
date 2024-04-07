@@ -44,7 +44,7 @@
   height: 2rem;
   border: none;
   border-bottom: 1px solid transparent;
-  font-family: "andale mono";
+  font-family: "andale mono", "Reddit Mono", monospace;
   text-align: center;
 }
 
@@ -107,7 +107,7 @@
 .form textarea {
   width: 80%;
   border: none;
-  font-family: "andale mono";
+  font-family: "andale mono", "Reddit Mono", monospace;
   text-align: center;
   margin: 1rem;
   border-bottom: 1px solid transparent;
@@ -129,7 +129,7 @@
   background-color: transparent;
   border: none;
   color: black;
-  font-family: "andale mono";
+  font-family: "andale mono", "Reddit Mono", monospace;
 }
 
 .form button:hover {
