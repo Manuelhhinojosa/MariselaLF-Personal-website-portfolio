@@ -44,7 +44,7 @@
   height: 2rem;
   border: none;
   border-bottom: 1px solid transparent;
-  font-family: "andale mono";
+  font-family: "andale mono", "Reddit Mono", monospace;
   text-align: center;
 }
 
@@ -59,7 +59,7 @@
   height: 2rem;
   text-align: center;
   border-bottom: 1px solid transparent;
-  font-family: "andale mono";
+  font-family: "andale mono", "Reddit Mono", monospace;
 }
 
 .videoInput:hover {
@@ -79,7 +79,7 @@
 .form input::file-selector-button {
   background-color: white;
   border: 1px solid black;
-  font-family: "andale mono";
+  font-family: "andale mono", "Reddit Mono", monospace;
   margin: 1rem;
   border: none;
 }
@@ -96,7 +96,7 @@
 
 .form label {
   color: gray;
-  font-family: "andale mono";
+  font-family: "andale mono", "Reddit Mono", monospace;
   font-weight: 100;
   font-size: 0.8rem;
 }
@@ -110,7 +110,7 @@
   width: 80%;
   border: none;
   border: 1px solid transparent;
-  font-family: "andale mono";
+  font-family: "andale mono", "Reddit Mono", monospace;
   text-align: center;
 }
 
@@ -129,7 +129,7 @@
   background-color: transparent;
   border: none;
   color: black;
-  font-family: "andale mono";
+  font-family: "andale mono", "Reddit Mono", monospace;
 }
 
 .form button:hover {

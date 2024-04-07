@@ -48,7 +48,7 @@
   width: 60%;
   border: none;
   border-bottom: 1px solid transparent;
-  font-family: "andale mono";
+  font-family: "andale mono", "Reddit Mono", monospace;
 }
 
 .contactForm input:hover {
@@ -64,7 +64,7 @@
   width: 100%;
   border: none;
   border-bottom: 1px solid transparent;
-  font-family: "andale mono";
+  font-family: "andale mono", "Reddit Mono", monospace;
   text-align: center;
 }
 
@@ -83,7 +83,7 @@
   background-color: transparent;
   border: none;
   color: black;
-  font-family: "andale mono";
+  font-family: "andale mono", "Reddit Mono", monospace;
 }
 
 .contactForm button:hover {
@@ -99,7 +99,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-family: "andale mono";
+  font-family: "andale mono", "Reddit Mono", monospace;
   font-size: 0.7rem;
   margin-bottom: 1rem;
 }

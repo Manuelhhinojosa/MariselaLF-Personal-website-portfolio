@@ -192,7 +192,7 @@
   width: 80%;
   display: flex;
   justify-content: space-between;
-  font-family: "andale mono";
+  font-family: "andale mono", "Reddit Mono", monospace;
   font-size: 0.7rem;
   color: gray;
   margin: 0.5rem;
@@ -201,7 +201,7 @@
 .btnsContainer button {
   background-color: transparent;
   border: none;
-  font-family: "andale mono";
+  font-family: "andale mono", "Reddit Mono", monospace;
   font-size: 0.7rem;
   color: gray;
 }
