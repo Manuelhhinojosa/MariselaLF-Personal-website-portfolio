@@ -48,7 +48,7 @@
 }
 
 .descContainer {
-  height: 15%;
+  max-height: 15%;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -131,15 +131,12 @@
   }
 
   .descContainer {
-    height: 50vh;
+    max-height: 50vh;
     margin-top: 2rem;
+    margin-bottom: 4rem;
     overflow: hidden;
     overflow-y: scroll;
     align-items: flex-start;
-  }
-
-  .descText::-webkit-scrollbar {
-    width: 1.5px;
   }
 
   .imagesContainer {

@@ -56,22 +56,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
-  overflow-y: scroll;
   position: relative;
   border-bottom: 1px dashed black;
-}
-
-.postContainer::-webkit-scrollbar {
-  width: 1px;
-}
-
-.postContainer::-webkit-scrollbar-thumb {
-  background-color: transparent;
-}
-
-.postContainer::-webkit-scrollbar-track {
-  background-color: transparent;
 }
 
 .titleContainer {
@@ -165,8 +151,6 @@
 }
 
 .videoContainer iframe {
-  /* width: 560px;
-  height: 315px; */
   width: 70%;
   height: 80%;
 }
@@ -258,20 +242,8 @@
     margin-top: 2rem;
   }
 
-  .postsContainer::-webkit-scrollbar {
-    width: 1.5px;
-  }
-
-  .postContainer::-webkit-scrollbar {
-    width: 1.5px;
-  }
-
-  .descriptionContainer::-webkit-scrollbar {
-    width: 1.5px;
-  }
-
-  .textContainer::-webkit-scrollbar {
-    width: 1.5px;
+  .descriptionContainer {
+    max-height: 12.5vh;
   }
 
   .textContainer {
