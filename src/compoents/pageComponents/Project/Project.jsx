@@ -10,8 +10,7 @@ const Project = (props) => {
       <div className={s.bottomContainer}>
         <div className={s.projectContainer}>
           <div className={s.titleContainer}>
-            {" "}
-            <p>{props.project.title}</p>{" "}
+            <p>{props.project.title}</p>
           </div>
           <div className={s.descContainer}>
             {props.project.id === 1 ? (
