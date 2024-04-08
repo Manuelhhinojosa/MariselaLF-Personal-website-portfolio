@@ -42,7 +42,7 @@
 }
 
 .aboutTextContainer::-webkit-scrollbar {
-  width: 2px;
+  width: 1px;
 }
 
 .aboutTextContainer::-webkit-scrollbar-thumb {
