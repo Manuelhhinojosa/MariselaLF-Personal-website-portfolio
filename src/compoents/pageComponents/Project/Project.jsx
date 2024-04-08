@@ -26,8 +26,8 @@ const Project = (props) => {
             {props.project.id === 2 ? (
               <div className={s.descText}>
                 <p>{props.project.description.slice(0, 141)}</p>
-                <p>{props.project.description.slice(142, 435)}</p>
-                <p>{props.project.description.slice(436)}</p>
+                <p>{props.project.description.slice(142, 434)}</p>
+                <p>{props.project.description.slice(435)}</p>
               </div>
             ) : (
               ""
@@ -72,8 +72,8 @@ const Project = (props) => {
 
             {props.project.id === 5 ? (
               <div className={s.descText}>
-                <p>{props.project.description.slice(0, 560)}</p>
-                <p>{props.project.description.slice(561, 1023)}</p>
+                <p>{props.project.description.slice(0, 559)}</p>
+                <p>{props.project.description.slice(560, 1023)}</p>
                 <p>{props.project.description.slice(1024)}</p>
               </div>
             ) : (
@@ -100,7 +100,7 @@ const Project = (props) => {
               <div className={s.descText}>
                 <p>{props.project.description.slice(0, 310)}</p>
                 <p>{props.project.description.slice(311, 679)}</p>
-                <p>{props.project.description.slice(680)}</p>
+                <p>{props.project.description.slice(679)}</p>
               </div>
             ) : (
               ""
