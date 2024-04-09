@@ -57,7 +57,8 @@ const Form = (props) => {
     //   console.log(pair[0] + ", " + pair[1]);
     // }
 
-    const url = "http://localhost:8000/posts/create";
+    const url =
+      "https://mariselafierroapi-5307e550f9a3.herokuapp.com/posts/create";
 
     axios
       .post(url, formData)
@@ -74,7 +75,8 @@ const Form = (props) => {
         setDescriptionPost("");
         setVideo("");
 
-        const getAllPostsUrl = "http://localhost:8000/posts/allposts";
+        const getAllPostsUrl =
+          "https://mariselafierroapi-5307e550f9a3.herokuapp.com/posts/allposts";
 
         axios.get(getAllPostsUrl).then((response) => {
           props.userState.setPosts(response.data.reverse());

@@ -26,7 +26,8 @@ function App() {
 
   // posts
   const [posts, setPosts] = useState([]);
-  const getAllPostsUrl = "http://localhost:8000/posts/allposts";
+  const getAllPostsUrl =
+    "https://mariselafierroapi-5307e550f9a3.herokuapp.com/posts/allposts";
 
   useEffect(() => {
     axios

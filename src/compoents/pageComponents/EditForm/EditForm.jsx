@@ -36,13 +36,14 @@ const EditForm = (props) => {
     formData.append("title", title);
     formData.append("description", descriptionPost);
 
-    const editURL = `http://localhost:8000/posts/${post._id}`;
+    const editURL = `https://mariselafierroapi-5307e550f9a3.herokuapp.com/posts/${post._id}`;
     const config = { headers: { "Content-Type": "application/json" } };
 
     axios
       .put(editURL, formData, config)
       .then((result) => {
-        const getAllPostsUrl = "http://localhost:8000/posts/allposts";
+        const getAllPostsUrl =
+          "https://mariselafierroapi-5307e550f9a3.herokuapp.com/posts/allposts";
         axios.get(getAllPostsUrl).then((response) => {
           const allPostsAfterEditing = response.data;
           props.verificationState.setPosts(allPostsAfterEditing.reverse());

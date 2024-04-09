@@ -9,7 +9,8 @@ import { useState } from "react";
 export const SinglePost = (props) => {
   const navigate = useNavigate();
   let location = useLocation();
-  const getAllPostsUrl = "http://localhost:8000/posts/allposts";
+  const getAllPostsUrl =
+    "https://mariselafierroapi-5307e550f9a3.herokuapp.com/posts/allposts";
   let reference = location.pathname.slice(1);
   let post = {};
 
@@ -113,7 +114,9 @@ export const SinglePost = (props) => {
               className={s.likesBtnContainer}
               onClick={() => {
                 axios
-                  .patch(`http://localhost:8000/posts/${post._id}`)
+                  .patch(
+                    `https://mariselafierroapi-5307e550f9a3.herokuapp.com/posts/${post._id}`
+                  )
                   .then((result) => {
                     axios.get(getAllPostsUrl).then((res) => {
                       const updatedPosts = res.data;
@@ -151,7 +154,9 @@ export const SinglePost = (props) => {
                 className={s.deleteContainer}
                 onClick={() => {
                   axios
-                    .delete(`http://localhost:8000/posts/${post._id}`)
+                    .delete(
+                      `https://mariselafierroapi-5307e550f9a3.herokuapp.com/posts/${post._id}`
+                    )
                     .then((result) => {
                       axios.get(getAllPostsUrl).then((r) => {
                         const updatedPosts2 = r.data;

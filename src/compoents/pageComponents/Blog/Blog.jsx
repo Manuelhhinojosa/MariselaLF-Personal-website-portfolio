@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 export const Blog = (props) => {
-  const getAllPostsUrl = "http://localhost:8000/posts/allposts";
+  const getAllPostsUrl =
+    "https://mariselafierroapi-5307e550f9a3.herokuapp.com/posts/allposts";
 
   const index1 = 0;
   const [index2, setIndex2] = useState(0);
@@ -156,7 +157,9 @@ export const Blog = (props) => {
                   className={s.btnContainer}
                   onClick={() => {
                     axios
-                      .patch(`http://localhost:8000/posts/${post._id}`)
+                      .patch(
+                        `https://mariselafierroapi-5307e550f9a3.herokuapp.com/posts/${post._id}`
+                      )
                       .then((result) => {
                         axios.get(getAllPostsUrl).then((res) => {
                           const updatedPosts = res.data;
@@ -196,7 +199,9 @@ export const Blog = (props) => {
                     className={s.btnContainer}
                     onClick={() => {
                       axios
-                        .delete(`http://localhost:8000/posts/${post._id}`)
+                        .delete(
+                          `https://mariselafierroapi-5307e550f9a3.herokuapp.com/posts/${post._id}`
+                        )
                         .then((result) => {
                           axios.get(getAllPostsUrl).then((r) => {
                             const updatedPosts2 = r.data;

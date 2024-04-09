@@ -17,7 +17,8 @@ export const Login = (props) => {
   const handleSignIn = async (e) => {
     e.preventDefault();
 
-    const loginURL = "http://localhost:8000/user/login";
+    const loginURL =
+      "https://mariselafierroapi-5307e550f9a3.herokuapp.com/user/login";
 
     if (usernameRef.current.value === "" || passwordRef.current.value === "") {
       usernameRef.current.focus();
