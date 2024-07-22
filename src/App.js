@@ -26,8 +26,7 @@ function App() {
 
   // posts
   const [posts, setPosts] = useState([]);
-  const getAllPostsUrl =
-    "https://mariselafierroapi-5307e550f9a3.herokuapp.com/posts/allposts";
+  const getAllPostsUrl = "https://marisela-api.vercel.app/posts/allposts";
 
   useEffect(() => {
     axios

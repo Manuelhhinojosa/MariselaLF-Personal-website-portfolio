@@ -57,8 +57,7 @@ const Form = (props) => {
     //   console.log(pair[0] + ", " + pair[1]);
     // }
 
-    const url =
-      "https://mariselafierroapi-5307e550f9a3.herokuapp.com/posts/create";
+    const url = "https://marisela-api.vercel.app/posts/create";
 
     axios
       .post(url, formData)
@@ -75,8 +74,7 @@ const Form = (props) => {
         setDescriptionPost("");
         setVideo("");
 
-        const getAllPostsUrl =
-          "https://mariselafierroapi-5307e550f9a3.herokuapp.com/posts/allposts";
+        const getAllPostsUrl = "https://marisela-api.vercel.app/posts/allposts";
 
         axios.get(getAllPostsUrl).then((response) => {
           props.userState.setPosts(response.data.reverse());

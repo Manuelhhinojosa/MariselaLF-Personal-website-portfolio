@@ -9,8 +9,7 @@ import { useState } from "react";
 export const SinglePost = (props) => {
   const navigate = useNavigate();
   let location = useLocation();
-  const getAllPostsUrl =
-    "https://mariselafierroapi-5307e550f9a3.herokuapp.com/posts/allposts";
+  const getAllPostsUrl = "https://marisela-api.vercel.app/posts/allposts";
   let reference = location.pathname.slice(1);
   let post = {};
 
@@ -114,9 +113,7 @@ export const SinglePost = (props) => {
               className={s.likesBtnContainer}
               onClick={() => {
                 axios
-                  .patch(
-                    `https://mariselafierroapi-5307e550f9a3.herokuapp.com/posts/${post._id}`
-                  )
+                  .patch(`https://marisela-api.vercel.app/posts/${post._id}`)
                   .then((result) => {
                     axios.get(getAllPostsUrl).then((res) => {
                       const updatedPosts = res.data;
@@ -154,9 +151,7 @@ export const SinglePost = (props) => {
                 className={s.deleteContainer}
                 onClick={() => {
                   axios
-                    .delete(
-                      `https://mariselafierroapi-5307e550f9a3.herokuapp.com/posts/${post._id}`
-                    )
+                    .delete(`https://marisela-api.vercel.app/posts/${post._id}`)
                     .then((result) => {
                       axios.get(getAllPostsUrl).then((r) => {
                         const updatedPosts2 = r.data;

@@ -36,14 +36,13 @@ const EditForm = (props) => {
     formData.append("title", title);
     formData.append("description", descriptionPost);
 
-    const editURL = `https://mariselafierroapi-5307e550f9a3.herokuapp.com/posts/${post._id}`;
+    const editURL = `https://marisela-api.vercel.app/posts/${post._id}`;
     const config = { headers: { "Content-Type": "application/json" } };
 
     axios
       .put(editURL, formData, config)
       .then((result) => {
-        const getAllPostsUrl =
-          "https://mariselafierroapi-5307e550f9a3.herokuapp.com/posts/allposts";
+        const getAllPostsUrl = "https://marisela-api.vercel.app/posts/allposts";
         axios.get(getAllPostsUrl).then((response) => {
           const allPostsAfterEditing = response.data;
           props.verificationState.setPosts(allPostsAfterEditing.reverse());
